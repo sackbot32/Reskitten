@@ -96,6 +96,13 @@ public class PlayerControl : MonoBehaviour
             {
                 transform.position = initialPos;
             }
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                if (Physics.Raycast(cam.position,cam.forward, out RaycastHit hit, 100f))
+                {
+                    transform.position = hit.point;
+                }
+            }
         #endif
         //Debug teleport
         moveDir = moveInput.action.ReadValue<Vector2>().normalized;
