@@ -18,31 +18,34 @@ public class QuickTravel : EditorWindow
     }
     private void OnGUI()
     {
-        currentObj = (QuickTravelObject)EditorGUILayout.ObjectField(currentObj, typeof(QuickTravelObject), true);
+        currentObj = (QuickTravelObject)EditorGUILayout.ObjectField(currentObj, typeof(QuickTravelObject), false);
         if (GUILayout.Button("Reload"))
         {
             Repaint();
         }
-        foreach (QuickTravelPos item in currentObj.positions)
-        {
-            GUILayout.BeginHorizontal();
-            GUILayout.Label(item.posName);
-            GUILayout.Label("X:" + item.pos.x);
-            GUILayout.Label("Y:" + item.pos.y);
-            GUILayout.Label("Z:" + item.pos.z);
-            if (GUILayout.Button("Teleport Here"))
+        if (currentObj != null) 
+        { 
+            foreach (QuickTravelPos item in currentObj.positions)
             {
-                if (player == null)
+                GUILayout.BeginHorizontal();
+                GUILayout.Label(item.posName);
+                GUILayout.Label("X:" + item.pos.x);
+                GUILayout.Label("Y:" + item.pos.y);
+                GUILayout.Label("Z:" + item.pos.z);
+                if (GUILayout.Button("Teleport Here"))
                 {
-                    player = GameObject.FindGameObjectWithTag("Player").transform;
+                    if (player == null)
+                    {
+                        player = GameObject.FindGameObjectWithTag("Player").transform;
+                    }
+                    if (player != null)
+                    {
+                        player.position = item.pos;
+                    }
                 }
-                if (player != null)
-                {
-                    player.position = item.pos;
-                }
-            }
-            GUILayout.EndHorizontal();
+                GUILayout.EndHorizontal();
 
+            }
         }
         
 
