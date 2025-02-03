@@ -5,11 +5,11 @@ using System.Collections.Generic;
 public class ToolUser : MonoBehaviour
 {
 
-    public InputActionReference main;
-    public InputActionReference secondary;
+    public InputActionAsset inputActions;
     public GameObject tool;
     public List<GameObject> tools;
     private ITool currentTool;
+    private int currentToolIndex;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,41 +19,85 @@ public class ToolUser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (main.action.IsPressed())
+        if (inputActions.FindAction("Attack").IsPressed())
         {
             print("Main being pressed");
             currentTool.Main();
             
         }
-        if (main.action.WasReleasedThisFrame())
+        if (inputActions.FindAction("Attack").WasReleasedThisFrame())
         {
             print("Main being pressed");
             currentTool.UpMain();
         }
 
-        if (secondary.action.IsPressed())
+        if (inputActions.FindAction("Secondary").IsPressed())
         {
             print("Secondary being pressed");
             currentTool.Secondary();
         }
-        if (secondary.action.WasReleasedThisFrame())
+        if (inputActions.FindAction("Secondary").WasReleasedThisFrame())
         {
             currentTool.UpSecondary();
         }
 
+        if (inputActions.FindAction("1").WasPressedThisFrame())
+        {
+            ChangeTool(0);
+        }
+        if (inputActions.FindAction("2").WasPressedThisFrame())
+        {
+            ChangeTool(1);
+        }
+        if (inputActions.FindAction("3").WasPressedThisFrame())
+        {
+            ChangeTool(2);
+        }
+        if (inputActions.FindAction("4").WasPressedThisFrame())
+        {
+            ChangeTool(3);
+        }
+        if (inputActions.FindAction("5").WasPressedThisFrame())
+        {
+            ChangeTool(4);
+        }
+        if (inputActions.FindAction("ToolScroll").ReadValue<float>() < 0)
+        {
+            if(currentToolIndex - 1 < 0)
+            {
+                ChangeTool(tools.Count -1);
+            } else
+            {
+                ChangeTool(currentToolIndex - 1);
+            }
+        }
+        if (inputActions.FindAction("ToolScroll").ReadValue<float>() > 0)
+        {
+            if(currentToolIndex + 1 >= tools.Count)
+            {
+                ChangeTool(0);
+            } else
+            {
+                ChangeTool(currentToolIndex + 1);
+            }
+        }
     }
 
     public void ChangeTool(int whichTool)
     {
-        foreach (GameObject tool in tools)
+        if(tools[whichTool] != null)
         {
-            tool.SetActive(false);
-        }
+            currentToolIndex = whichTool;
+            foreach (GameObject tool in tools)
+            {
+                tool.SetActive(false);
+            }
 
-        tools[whichTool].SetActive(true);
-        if (tools[whichTool].TryGetComponent<ITool>(out currentTool))
-        {
-            print("tool gotten");
+            tools[whichTool].SetActive(true);
+            if (tools[whichTool].TryGetComponent<ITool>(out currentTool))
+            {
+                print("tool gotten");
+            }
         }
     }
 
