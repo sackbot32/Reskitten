@@ -34,6 +34,7 @@ public class Laser : MonoBehaviour, ITool
         if (Physics.Raycast(ray, out hit, 100))
         {
             lineRenderer.SetPosition(1, hit.point);
+            CatManager.instance.currentCat.GoToPoint(hit.point, true);
         }
         else
         {
