@@ -33,29 +33,32 @@ public class PrefabPallete : EditorWindow
         { 
             foreach (GameObject prefab in currentPallete.prefabs)
             {
-                EditorGUILayout.BeginHorizontal();
-                GUILayout.Label(prefab.name);
-                prefabs.Add((GameObject)EditorGUILayout.ObjectField(prefab, typeof(GameObject), false));
-                if (GUILayout.Button("Spawn item in pos"))
+                if(prefab != null)
                 {
-                    GameObject spawnedObj = null;
-                    if(relativeToSelection)
+                    EditorGUILayout.BeginHorizontal();
+                    GUILayout.Label(prefab.name);
+                        prefabs.Add((GameObject)EditorGUILayout.ObjectField(prefab, typeof(GameObject), false));
+                    if (GUILayout.Button("Spawn item in pos"))
                     {
-                        spawnedObj = Instantiate(prefab, Selection.activeGameObject.transform.position + positionToSpawn, Quaternion.identity);
-                    } else
-                    {
-                        spawnedObj = Instantiate(prefab, positionToSpawn, Quaternion.identity);
-                    }
-                    if(spawnedObj != null && childToSelection)
-                    {
-                        if(Selection.activeGameObject != null)
+                        GameObject spawnedObj = null;
+                        if(relativeToSelection)
                         {
-                            spawnedObj.transform.parent = Selection.activeGameObject.transform;
+                            spawnedObj = Instantiate(prefab, Selection.activeGameObject.transform.position + positionToSpawn, Quaternion.identity);
+                        } else
+                        {
+                            spawnedObj = Instantiate(prefab, positionToSpawn, Quaternion.identity);
                         }
+                        if(spawnedObj != null && childToSelection)
+                        {
+                            if(Selection.activeGameObject != null)
+                            {
+                                spawnedObj.transform.parent = Selection.activeGameObject.transform;
+                            }
+                        }
+                        lastObj = spawnedObj;
                     }
-                    lastObj = spawnedObj;
+                    EditorGUILayout.EndHorizontal();
                 }
-                EditorGUILayout.EndHorizontal();
             }
         }
         if (GUILayout.Button("Undo last obj"))
