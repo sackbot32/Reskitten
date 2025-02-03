@@ -7,7 +7,12 @@ public class CatMintThrower : MonoBehaviour, ITool
     public Transform throwPoint;
     public float testThrowForce;
     private GameObject currentMint;
+    public Sprite toolSprite;
 
+    public Sprite GetImage()
+    {
+        return toolSprite;
+    }
     public void Main()
     {
         if(currentMint == null)

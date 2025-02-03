@@ -1,12 +1,19 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Laser : MonoBehaviour, ITool
 {
     public LineRenderer lineRenderer;
     public Transform shootPoint;
+    public Sprite toolSprite;
+
+    public Sprite GetImage()
+    {
+        return toolSprite;
+    }
     private void Start()
     {
-        
+
     }
 
     private void Update()

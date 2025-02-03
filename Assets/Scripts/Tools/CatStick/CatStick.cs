@@ -3,6 +3,12 @@ using UnityEngine;
 public class CatStick : MonoBehaviour, ITool
 {
     public Transform point;
+    public Sprite toolSprite;
+
+    public Sprite GetImage()
+    {
+        return toolSprite;
+    }
     private void Update()
     {
         if(gameObject.activeSelf)

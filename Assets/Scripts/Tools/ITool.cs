@@ -2,6 +2,7 @@ using UnityEngine;
 
 public interface ITool
 {
+    public Sprite GetImage();
     public void Main();
 
     public void UpMain();
