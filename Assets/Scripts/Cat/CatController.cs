@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -6,7 +7,7 @@ public class CatController : MonoBehaviour
 {
     public NavMeshAgent agent;
     public float blockSightLenght;
-
+    public bool canJump = false;
 
     private void Start()
     {
@@ -26,5 +27,30 @@ public class CatController : MonoBehaviour
                 agent.SetDestination(point);
             }
         }
+    }
+
+    private void Update()
+    {
+        if(agent.isOnOffMeshLink && canJump)
+        {
+            agent.autoTraverseOffMeshLink = false;
+            StartCoroutine(Parabola(agent, 5, 1));
+        }
+    }
+
+    IEnumerator Parabola(NavMeshAgent agent, float height, float duration)
+    {
+        OffMeshLinkData data = agent.currentOffMeshLinkData;
+        Vector3 startPos = agent.transform.position;
+        Vector3 endPos = data.endPos + Vector3.up * agent.baseOffset;
+        float normalizedTime = 0.0f;
+        while (normalizedTime < 1.0f)
+        {
+            float yOffset = height * 4.0f * (normalizedTime - normalizedTime * normalizedTime);
+            agent.transform.position = Vector3.Lerp(startPos, endPos, normalizedTime) + yOffset * Vector3.up;
+            normalizedTime += Time.deltaTime / duration;
+            yield return null;
+        }
+        agent.CompleteOffMeshLink();
     }
 }
