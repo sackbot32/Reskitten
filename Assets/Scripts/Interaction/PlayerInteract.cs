@@ -38,9 +38,12 @@ public class PlayerInteract : MonoBehaviour
         }
         if (inputActions.FindAction("Interact").IsPressed())
         {
-            if (currentInteractObject != null && !currentInteract.IsInteracting())
+            if (currentInteract != null)
             {
-                mantainInteraction = currentInteract.RecieveInteraction();
+                if (!currentInteract.IsInteracting())
+                {
+                    mantainInteraction = currentInteract.RecieveInteraction();
+                }
             }
 
         }
