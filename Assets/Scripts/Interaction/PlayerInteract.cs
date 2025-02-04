@@ -24,7 +24,6 @@ public class PlayerInteract : MonoBehaviour
             if(hit.collider.gameObject.TryGetComponent<IInteract>(out currentInteract) 
                 && hit.collider.gameObject != currentInteractObject)
             {
-                print("item in ray");
                 currentInteractObject = hit.collider.gameObject;
             } else
             {
@@ -39,7 +38,6 @@ public class PlayerInteract : MonoBehaviour
         }
         if (inputActions.FindAction("Interact").IsPressed())
         {
-            print("Interact start");
             if (currentInteractObject != null && !currentInteract.IsInteracting())
             {
                 mantainInteraction = currentInteract.RecieveInteraction();
@@ -57,7 +55,6 @@ public class PlayerInteract : MonoBehaviour
 
         if (inputActions.FindAction("Interact").WasReleasedThisFrame())
         {
-            print("Interact end");
             if (currentInteract != null)
             { 
                 currentInteract.EndInteraction();

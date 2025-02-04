@@ -5,13 +5,13 @@ public class CatMint : MonoBehaviour
     public float floorDetect = 5;
     private Rigidbody rb;
     private bool hasHitGround;
-    private Collider collider;
+    private Collider mintCollider;
     [SerializeField]
     private Transform feet;
 
     private void Start()
     {
-        collider = GetComponent<Collider>();
+        mintCollider = GetComponent<Collider>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -31,7 +31,7 @@ public class CatMint : MonoBehaviour
             hasHitGround = true;
             rb.isKinematic = true;
             transform.position = hit.point - feet.localPosition;
-            collider.isTrigger = true;
+            mintCollider.isTrigger = true;
         }
 
         if(hasHitGround)
