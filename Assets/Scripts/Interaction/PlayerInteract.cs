@@ -1,18 +1,20 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerInteract : MonoBehaviour
 {
     public InputActionAsset inputActions;
     private IInteract currentInteract;
     private GameObject currentInteractObject;
+    public Image interactImage;
     Ray ray;
     RaycastHit hit;
     private bool mantainInteraction;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        interactImage.enabled = false;
     }
 
     // Update is called once per frame
@@ -25,6 +27,11 @@ public class PlayerInteract : MonoBehaviour
                 && hit.collider.gameObject != currentInteractObject)
             {
                 currentInteractObject = hit.collider.gameObject;
+                if(!interactImage.enabled)
+                {
+                    interactImage.sprite = currentInteract.ReturnInteractSprite();
+                    interactImage.enabled = true;
+                }
             } else
             {
                 if(hit.collider.gameObject != currentInteractObject && currentInteract != null)
@@ -33,9 +40,12 @@ public class PlayerInteract : MonoBehaviour
                     mantainInteraction = false;
                     currentInteract = null;
                 }
+                
                 currentInteractObject = null;
             }
         }
+
+
         if (inputActions.FindAction("Interact").IsPressed())
         {
             if (currentInteract != null)
@@ -64,6 +74,10 @@ public class PlayerInteract : MonoBehaviour
             }
             mantainInteraction = false;
             currentInteract = null;
+        }
+        if(currentInteract == null && interactImage.enabled)
+        {
+            interactImage.enabled = false;
         }
         
     }
