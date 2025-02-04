@@ -21,19 +21,19 @@ public class ToolUser : MonoBehaviour
     {
         if (inputActions.FindAction("Attack").IsPressed())
         {
-            print("Main being pressed");
+            //print("Main being pressed");
             currentTool.Main();
             
         }
         if (inputActions.FindAction("Attack").WasReleasedThisFrame())
         {
-            print("Main being pressed");
+            //print("Main being pressed");
             currentTool.UpMain();
         }
 
         if (inputActions.FindAction("Secondary").IsPressed())
         {
-            print("Secondary being pressed");
+            //print("Secondary being pressed");
             currentTool.Secondary();
         }
         if (inputActions.FindAction("Secondary").WasReleasedThisFrame())
