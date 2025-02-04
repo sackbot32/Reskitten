@@ -31,8 +31,12 @@ public class CatMint : MonoBehaviour
             hasHitGround = true;
             rb.isKinematic = true;
             transform.position = hit.point - feet.localPosition;
-            CatManager.instance.currentCat.GoToPoint(hit.point, false);
             collider.isTrigger = true;
+        }
+
+        if(hasHitGround)
+        {
+            CatManager.instance.currentCat.GoToPoint(hit.point);
         }
     }
 }
