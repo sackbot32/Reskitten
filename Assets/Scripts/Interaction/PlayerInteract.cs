@@ -21,7 +21,7 @@ public class PlayerInteract : MonoBehaviour
     void Update()
     {
         ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-        if (Physics.Raycast(ray, out hit, 100))
+        if (Physics.Raycast(ray, out hit, 3.5f))
         {
             if(hit.collider.gameObject.TryGetComponent<IInteract>(out currentInteract) 
                 && hit.collider.gameObject != currentInteractObject)
@@ -43,6 +43,15 @@ public class PlayerInteract : MonoBehaviour
                 
                 currentInteractObject = null;
             }
+        } else
+        {
+            if(currentInteract != null)
+            {
+                currentInteract.EndInteraction();
+                mantainInteraction = false;
+                currentInteract = null;
+            }
+            currentInteractObject = null;
         }
 
 

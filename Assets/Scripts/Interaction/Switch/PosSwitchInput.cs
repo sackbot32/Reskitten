@@ -12,6 +12,11 @@ public class PosSwitchInput : MonoBehaviour, ISwitchInput
     {
         ogPos = transform.position;
     }
+
+    private void OnValidate()
+    {
+        ogPos = transform.position;
+    }
     public int GetLength()
     {
         return posList.Count;
@@ -31,6 +36,7 @@ public class PosSwitchInput : MonoBehaviour, ISwitchInput
             if (relativeToOriginal)
             {
                 //transform.position = ogPos + posList[input];
+                print("new pos = " + (ogPos + posList[input]));
                 transform.DOMove(ogPos + posList[input],moveDuration);
             }
             else
