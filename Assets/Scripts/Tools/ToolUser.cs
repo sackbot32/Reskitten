@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class ToolUser : MonoBehaviour
 {
-
+    static public ToolUser instance;
     public InputActionAsset inputActions;
     public GameObject tool;
     public List<GameObject> tools;
@@ -13,6 +13,7 @@ public class ToolUser : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        instance = this;
         ChangeTool(0);
     }
 
@@ -101,10 +102,13 @@ public class ToolUser : MonoBehaviour
         }
     }
 
-    public void AddTool(GameObject tool)
+    public void AddTool(GameObject tool,Quaternion rotation)
     {
-        tool.transform.parent = transform;
-        tool.transform.position = Vector3.zero;
         tools.Add(tool);
+        int index = tools.IndexOf(tool);
+        ChangeTool(index);
+        tools[index].transform.parent = transform;
+        tools[index].transform.localPosition = Vector3.zero;
+        tools[index].transform.localRotation = rotation;
     }
 }
