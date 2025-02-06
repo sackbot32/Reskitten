@@ -1,0 +1,34 @@
+using DG.Tweening;
+using UnityEngine;
+
+public class CrowdPosition : MonoBehaviour
+{
+    private Transform posForCrowd;
+    public float travelTime;
+    private GameObject currentCrowd;
+
+    private void Awake()
+    {
+        posForCrowd = transform.GetChild(0).transform;
+    }
+
+    public void SetCrowd(GameObject newCrowd)
+    {
+        if (currentCrowd == null)
+        {
+            currentCrowd = newCrowd;
+            newCrowd.GetComponent<CrowdInstance>().currentPosition.RemoveCrowd(newCrowd);
+            newCrowd.GetComponent<CrowdInstance>().currentPosition = gameObject.GetComponent<CrowdPosition>();
+            newCrowd.gameObject.transform.DOMove(posForCrowd.position,travelTime);
+        }
+    }
+
+    public void RemoveCrowd(GameObject oldCrowd)
+    {
+        if (oldCrowd == currentCrowd)
+        { 
+            currentCrowd.GetComponent<CrowdInstance>().currentPosition = gameObject.GetComponent<CrowdPosition>();
+            currentCrowd = null;
+        }
+    }    
+}
