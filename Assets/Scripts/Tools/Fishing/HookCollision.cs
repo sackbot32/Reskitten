@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class HookCollision : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class HookCollision : MonoBehaviour
                 rodTool.TowardHook();
             } else
             {
+
+                rodTool.lRenderer.enabled = false;
                 Destroy(gameObject);
             }
         } else
