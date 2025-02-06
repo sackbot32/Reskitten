@@ -11,4 +11,7 @@ public interface ITool
     public void UpSecondary();
 
     public void Passive();
+
+    public void OnEquip();
+    public void OnUnequip();
 }

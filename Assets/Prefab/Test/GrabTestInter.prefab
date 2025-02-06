@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5943116180330105159}
   - component: {fileID: 6329699118100685806}
   m_Layer: 0
-  m_Name: GrabTest
+  m_Name: GrabTestInter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

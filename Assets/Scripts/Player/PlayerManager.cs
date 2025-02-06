@@ -6,6 +6,9 @@ public class PlayerManager : MonoBehaviour
     public GameObject player;
     public PlayerControl playerControl;
     public Rigidbody playerRb;
+    public bool diferentGravity = false;
+    public float gravityModifier;
+    public bool stopDiferentGravity = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,5 +22,16 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void FixedUpdate()
+    {
+        if (playerRb != null)
+        {
+            if (diferentGravity && !stopDiferentGravity)
+            {
+                playerRb.AddForce(player.transform.up * gravityModifier);
+            }
+        }
     }
 }

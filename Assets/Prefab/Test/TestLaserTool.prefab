@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5116290091168335933}
   - component: {fileID: 1079625941576478903}
   m_Layer: 0
-  m_Name: TestLaser
+  m_Name: TestLaserTool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

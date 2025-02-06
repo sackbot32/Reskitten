@@ -95,4 +95,14 @@ public class FishingRodTool : MonoBehaviour,ITool
         lRenderer.enabled = false;
         Destroy(objectToDestroy);
     }
+
+    public void OnEquip()
+    {
+
+    }
+
+    public void OnUnequip()
+    {
+
+    }
 }

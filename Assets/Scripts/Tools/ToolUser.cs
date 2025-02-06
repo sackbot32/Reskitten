@@ -88,15 +88,21 @@ public class ToolUser : MonoBehaviour
     {
         if(tools[whichTool] != null)
         {
+            if(currentTool != null)
+            {
+                currentTool.OnUnequip();
+            }
             currentToolIndex = whichTool;
             foreach (GameObject tool in tools)
             {
                 tool.SetActive(false);
             }
 
+
             tools[whichTool].SetActive(true);
             if (tools[whichTool].TryGetComponent<ITool>(out currentTool))
             {
+                currentTool.OnEquip();
                 print("tool gotten");
             }
         }
