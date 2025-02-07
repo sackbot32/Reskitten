@@ -62,6 +62,10 @@ public class ToolUser : MonoBehaviour
         {
             ChangeTool(4);
         }
+        if (inputActions.FindAction("6").WasPressedThisFrame())
+        {
+            ChangeTool(5);
+        }
         if (inputActions.FindAction("ToolScroll").ReadValue<float>() < 0)
         {
             if(currentToolIndex - 1 < 0)
