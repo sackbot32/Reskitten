@@ -45,12 +45,12 @@ GameObject:
   - component: {fileID: 5116290091168335933}
   - component: {fileID: 1079625941576478903}
   m_Layer: 0
-  m_Name: TestLaser
+  m_Name: TestLaserTool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2037244837409388675
 Transform:
   m_ObjectHideFlags: 0
@@ -241,3 +241,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 5116290091168335933}
   shootPoint: {fileID: 9135084545990193753}
+  toolSprite: {fileID: 0}

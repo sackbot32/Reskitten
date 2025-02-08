@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 1926981658534638763}
   - component: {fileID: 1898627902985322726}
   m_Layer: 0
-  m_Name: TestMintThrower
+  m_Name: TestMintThrowerTool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

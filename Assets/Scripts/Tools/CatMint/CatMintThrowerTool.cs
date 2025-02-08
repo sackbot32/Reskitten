@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CatMintThrower : MonoBehaviour, ITool
+public class CatMintThrowerTool : MonoBehaviour, ITool
 {
 
     public GameObject mintPrefab;
@@ -96,5 +96,15 @@ public class CatMintThrower : MonoBehaviour, ITool
             lineRendererPoints[i] = newPosition;
         }
         return lineRendererPoints;
+    }
+
+    public void OnEquip()
+    {
+
+    }
+
+    public void OnUnequip()
+    {
+        
     }
 }

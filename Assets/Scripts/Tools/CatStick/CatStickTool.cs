@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CatStick : MonoBehaviour, ITool
+public class CatStickTool : MonoBehaviour, ITool
 {
     public Transform point;
     public Sprite toolSprite;
@@ -45,5 +45,15 @@ public class CatStick : MonoBehaviour, ITool
     public void UpSecondary()
     {
          
+    }
+
+    public void OnEquip()
+    {
+
+    }
+
+    public void OnUnequip()
+    {
+
     }
 }

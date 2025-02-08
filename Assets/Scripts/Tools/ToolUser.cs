@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class ToolUser : MonoBehaviour
 {
-
+    static public ToolUser instance;
     public InputActionAsset inputActions;
     public GameObject tool;
     public List<GameObject> tools;
@@ -13,6 +13,7 @@ public class ToolUser : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        instance = this;
         ChangeTool(0);
     }
 
@@ -61,6 +62,10 @@ public class ToolUser : MonoBehaviour
         {
             ChangeTool(4);
         }
+        if (inputActions.FindAction("6").WasPressedThisFrame())
+        {
+            ChangeTool(5);
+        }
         if (inputActions.FindAction("ToolScroll").ReadValue<float>() < 0)
         {
             if(currentToolIndex - 1 < 0)
@@ -87,24 +92,33 @@ public class ToolUser : MonoBehaviour
     {
         if(tools[whichTool] != null)
         {
+            if(currentTool != null)
+            {
+                currentTool.OnUnequip();
+            }
             currentToolIndex = whichTool;
             foreach (GameObject tool in tools)
             {
                 tool.SetActive(false);
             }
 
+
             tools[whichTool].SetActive(true);
             if (tools[whichTool].TryGetComponent<ITool>(out currentTool))
             {
+                currentTool.OnEquip();
                 print("tool gotten");
             }
         }
     }
 
-    public void AddTool(GameObject tool)
+    public void AddTool(GameObject tool,Quaternion rotation)
     {
-        tool.transform.parent = transform;
-        tool.transform.position = Vector3.zero;
         tools.Add(tool);
+        int index = tools.IndexOf(tool);
+        ChangeTool(index);
+        tools[index].transform.parent = transform;
+        tools[index].transform.localPosition = Vector3.zero;
+        tools[index].transform.localRotation = rotation;
     }
 }

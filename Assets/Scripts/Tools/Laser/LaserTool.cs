@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Laser : MonoBehaviour, ITool
+public class LaserTool : MonoBehaviour, ITool
 {
     public LineRenderer lineRenderer;
     public Transform shootPoint;
@@ -56,6 +56,15 @@ public class Laser : MonoBehaviour, ITool
     
 
     public void UpSecondary()
+    {
+
+    }
+
+    public void OnEquip()
+    {
+
+    }
+    public void OnUnequip()
     {
 
     }
