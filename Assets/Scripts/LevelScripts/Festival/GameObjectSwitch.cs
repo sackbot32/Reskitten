@@ -4,18 +4,16 @@ using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine.Events;
 
-public class Decoration : MonoBehaviour, ISwitchInput
+public class GameObjectSwitch : MonoBehaviour, ISwitchInput
 {
-    public List<GameObject> decorationParent = new List<GameObject>();
+    public List<GameObject> gameObjectParent = new List<GameObject>();
     public int conditionFullfilledPos;
     public int conditionListPos;
-    public int assuredPos = 0;
-    public int crowdToSpawn = 2;
     public UnityEvent conditionEvent;
     //private bool crowdSpawned = false;
     public int GetLength()
     {
-        return decorationParent.Count;
+        return gameObjectParent.Count;
     }
 
     public bool SwitchInput(int input)
@@ -24,25 +22,20 @@ public class Decoration : MonoBehaviour, ISwitchInput
         {
             return false;
         }
-        else if (input >= decorationParent.Count)
+        else if (input >= gameObjectParent.Count)
         {
             return false;
         }
         else
         {
-            foreach (GameObject child in decorationParent)
+            foreach (GameObject child in gameObjectParent)
             {
                 child.SetActive(false);
             }
-            decorationParent[input].SetActive(true);
+            gameObjectParent[input].SetActive(true);
             if(conditionFullfilledPos == input)
             {
                 ConditionList.instance.SetConditionTrue(conditionListPos);
-                //if (!crowdSpawned)
-                //{
-                //    crowdSpawned=true;
-                //    CrowdInstanceManager.instance.SetCrowd(assuredPos,crowdToSpawn);
-                //}
                 conditionEvent.Invoke();
             }
             else
