@@ -17,18 +17,26 @@ public class CrowdPosition : MonoBehaviour
         if (currentCrowd == null)
         {
             currentCrowd = newCrowd;
-            newCrowd.GetComponent<CrowdInstance>().currentPosition.RemoveCrowd(newCrowd);
+            if(newCrowd.GetComponent<CrowdInstance>().currentPosition != null)
+            {
+                newCrowd.GetComponent<CrowdInstance>().currentPosition.RemoveCrowd(newCrowd);
+            }
             newCrowd.GetComponent<CrowdInstance>().currentPosition = gameObject.GetComponent<CrowdPosition>();
-            newCrowd.gameObject.transform.DOMove(posForCrowd.position,travelTime);
+            newCrowd.gameObject.transform.DOMove(posForCrowd.position, travelTime);
         }
     }
 
     public void RemoveCrowd(GameObject oldCrowd)
     {
         if (oldCrowd == currentCrowd)
-        { 
+        {
             currentCrowd.GetComponent<CrowdInstance>().currentPosition = gameObject.GetComponent<CrowdPosition>();
             currentCrowd = null;
         }
-    }    
+    }
+
+    public bool HasCrowd()
+    {
+        return currentCrowd != null;
+    }
 }
