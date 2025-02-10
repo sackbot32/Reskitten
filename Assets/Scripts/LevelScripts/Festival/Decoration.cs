@@ -12,7 +12,7 @@ public class Decoration : MonoBehaviour, ISwitchInput
     public int assuredPos = 0;
     public int crowdToSpawn = 2;
     public UnityEvent conditionEvent;
-    private bool crowdSpawned = false;
+    //private bool crowdSpawned = false;
     public int GetLength()
     {
         return decorationParent.Count;
@@ -38,11 +38,11 @@ public class Decoration : MonoBehaviour, ISwitchInput
             if(conditionFullfilledPos == input)
             {
                 ConditionList.instance.SetConditionTrue(conditionListPos);
-                if (!crowdSpawned)
-                {
-                    crowdSpawned=true;
-                    CrowdInstanceManager.instance.SetCrowd(assuredPos,crowdToSpawn);
-                }
+                //if (!crowdSpawned)
+                //{
+                //    crowdSpawned=true;
+                //    CrowdInstanceManager.instance.SetCrowd(assuredPos,crowdToSpawn);
+                //}
                 conditionEvent.Invoke();
             }
             else
