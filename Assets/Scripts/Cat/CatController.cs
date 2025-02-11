@@ -8,11 +8,14 @@ public class CatController : MonoBehaviour
     public NavMeshAgent agent;
     public float blockSightLenght;
     public bool canJump = false;
-    private Animator anim;
+    public Animator anim;
 
     private void Start()
     {
-        anim = transform.GetChild(0).gameObject.GetComponent<Animator>();
+        if(anim == null)
+        {
+            anim = transform.GetChild(0).gameObject.GetComponent<Animator>();
+        }
     }
 
     public void GoToPoint(Vector3 point,bool testCanSee = false)
