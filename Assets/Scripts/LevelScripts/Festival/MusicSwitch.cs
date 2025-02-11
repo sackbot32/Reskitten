@@ -12,6 +12,12 @@ public class MusicSwitch : MonoBehaviour,ISwitchInput
     public int conditionFullfilledPos;
     public int conditionListPos;
     public UnityEvent conditionEvent;
+    private int currentIndex;
+
+    public int CurrentPos()
+    {
+        return currentIndex;
+    }
 
     private void Start()
     {
@@ -40,6 +46,7 @@ public class MusicSwitch : MonoBehaviour,ISwitchInput
         }
         else
         {
+            currentIndex = input;
             if(currentAudio != null)
             {
                 currentAudio.DOFade(0,fadeDuration);

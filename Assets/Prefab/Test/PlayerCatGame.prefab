@@ -426,11 +426,11 @@ MonoBehaviour:
   walk: {fileID: 0}
   jump: {fileID: 0}
   addedSpeed: 90
-  maxSpeed: 10
+  maxSpeed: 5
   runMultiplier: 1
   speedDivider: 1.1
   jumpSpeedDivider: 3
-  jumpForce: 600
+  jumpForce: 300
   detectLength: 0.25
   addedGravity: 9
   vSensitivy: 0.1

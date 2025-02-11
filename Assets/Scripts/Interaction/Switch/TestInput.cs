@@ -3,6 +3,12 @@ using System.Collections.Generic;
 public class TestInput : MonoBehaviour, ISwitchInput
 {
     public List<string> testString = new List<string>();
+    private int currentIndex;
+
+    public int CurrentPos()
+    {
+        return currentIndex;
+    }
     public int GetLength()
     {
         return testString.Count;
@@ -18,6 +24,7 @@ public class TestInput : MonoBehaviour, ISwitchInput
             return false;
         } else
         {
+            currentIndex = input;
             print(testString[input]);
             return true;
         }

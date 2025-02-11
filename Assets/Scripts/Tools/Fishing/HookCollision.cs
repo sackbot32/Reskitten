@@ -9,21 +9,31 @@ public class HookCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (Physics.Raycast(transform.position, (PlayerManager.instance.player.transform.position - transform.position).normalized,out hit,
-            Vector3.Distance(PlayerManager.instance.player.transform.position, transform.position)))
+        if(collision.gameObject.tag == "HookPoint")
         {
-            if(hit.collider.gameObject == PlayerManager.instance.player)
+            if (Physics.Raycast(transform.position, (PlayerManager.instance.player.transform.position - transform.position).normalized, out hit,
+            Vector3.Distance(PlayerManager.instance.player.transform.position, transform.position)))
+            {
+                if (hit.collider.gameObject == PlayerManager.instance.player)
+                {
+                    rodTool.TowardHook();
+                }
+                else
+                {
+
+                    rodTool.lRenderer.enabled = false;
+                    Destroy(gameObject);
+                }
+            }
+            else
             {
                 rodTool.TowardHook();
-            } else
-            {
-
-                rodTool.lRenderer.enabled = false;
-                Destroy(gameObject);
             }
         } else
         {
-            rodTool.TowardHook();
+            rodTool.lRenderer.enabled = false;
+            Destroy(gameObject);
         }
+        
     }
 }

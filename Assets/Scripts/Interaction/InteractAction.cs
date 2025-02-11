@@ -37,5 +37,10 @@ public class InteractAction : MonoBehaviour,IInteract
          return interactImage;
     }
 
+    public void SelfDestroy()
+    {
+        Destroy(this);
+    }
+
     
 }

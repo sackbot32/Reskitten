@@ -1,20 +1,25 @@
 using UnityEngine;
-using UnityEngine.Windows;
+using System.Collections.Generic;
 
 public class SwitchMultipleOutput : MonoBehaviour
 {
     public GameObject[] switchObjects;
-    private int currentIndex;
+    private List<ISwitchInput> inputList = new List<ISwitchInput>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         foreach (GameObject switchObject in switchObjects) 
         {
-            if(switchObject.TryGetComponent<ISwitchInput>(out ISwitchInput input))
+            if(switchObject.TryGetComponent(out ISwitchInput input))
             {
-                input.SwitchInput(currentIndex);
+                inputList.Add(input);
             }
             
+        }
+
+        foreach (ISwitchInput input in inputList)
+        {
+            input.SwitchInput(0);
         }
         
         
@@ -23,36 +28,27 @@ public class SwitchMultipleOutput : MonoBehaviour
 
     public void GoUp()
     {
-        currentIndex++;
-        foreach (GameObject switchObject in switchObjects)
+        foreach (ISwitchInput input in inputList)
         {
-            if (switchObject.TryGetComponent<ISwitchInput>(out ISwitchInput input))
+            
+            if (!input.SwitchInput(input.CurrentPos() + 1))
             {
-                if (!input.SwitchInput(currentIndex))
-                {
-                    currentIndex = 0;
-                    input.SwitchInput(currentIndex);
-                }
+                input.SwitchInput(0);
             }
-
         }
+        
 
     }
 
     public void GoDown()
     {
-        currentIndex--;
-        foreach (GameObject switchObject in switchObjects)
+        foreach (ISwitchInput input in inputList)
         {
-            if (switchObject.TryGetComponent<ISwitchInput>(out ISwitchInput input))
+            
+            if (!input.SwitchInput(input.CurrentPos() + 1))
             {
-                if (!input.SwitchInput(currentIndex))
-                {
-                    currentIndex = input.GetLength() - 1;
-                    input.SwitchInput(currentIndex);
-                }
+                input.SwitchInput(input.GetLength() - 1);
             }
-
         }
     }
 }

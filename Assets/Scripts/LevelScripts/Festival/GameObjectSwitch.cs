@@ -9,6 +9,13 @@ public class GameObjectSwitch : MonoBehaviour, ISwitchInput
     public int conditionFullfilledPos;
     public int conditionListPos;
     public UnityEvent conditionEvent;
+    private int currentIndex;
+
+    public int CurrentPos()
+    {
+        return currentIndex;
+    }
+
     //private bool crowdSpawned = false;
     public int GetLength()
     {
@@ -27,6 +34,7 @@ public class GameObjectSwitch : MonoBehaviour, ISwitchInput
         }
         else
         {
+            currentIndex = input;
             foreach (GameObject child in gameObjectParent)
             {
                 child.SetActive(false);

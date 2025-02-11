@@ -5,6 +5,7 @@ using DG.Tweening;
 public class PosSwitchInput : MonoBehaviour, ISwitchInput
 {
     public List<Vector3> posList = new List<Vector3>();
+    private int currentIndex;
     public float moveDuration;
     public bool relativeToOriginal;
     public bool rebuildNavMesh;
@@ -34,10 +35,11 @@ public class PosSwitchInput : MonoBehaviour, ISwitchInput
             return false;
         } else
         {
+            currentIndex = input;
             if (relativeToOriginal)
             {
                 //transform.position = ogPos + posList[input];
-                print("new pos = " + (ogPos + posList[input]));
+                //print("new pos = " + (ogPos + posList[input]));
                 transform.DOMove(ogPos + posList[input],moveDuration).OnComplete(() =>
                 {
                     if (rebuildNavMesh)
@@ -59,5 +61,10 @@ public class PosSwitchInput : MonoBehaviour, ISwitchInput
             return true;
         }
        
+    }
+
+    public int CurrentPos()
+    {
+        return currentIndex;
     }
 }
