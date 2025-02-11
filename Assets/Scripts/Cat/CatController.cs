@@ -45,7 +45,6 @@ public class CatController : MonoBehaviour
         }
 
 
-        print("Current percentage " + agent.velocity.magnitude / agent.speed);
         anim.SetFloat("Speed",agent.velocity.magnitude/agent.speed);
     }
 
