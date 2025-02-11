@@ -7925,7 +7925,7 @@ GameObject:
   - component: {fileID: 593988564}
   - component: {fileID: 593988563}
   - component: {fileID: 593988562}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CatTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7981,7 +7981,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593988561}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.75
   m_Speed: 3.5
@@ -8027,14 +8027,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593988561}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 2.24, y: -0.891, z: 29.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1644880183}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &596649637
 GameObject:
   m_ObjectHideFlags: 0
@@ -9316,7 +9316,19 @@ MonoBehaviour:
   conditions: 00000000
   conditionFullfilledEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 593988564}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &689906150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12477,7 +12489,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 2
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -16381,9 +16393,41 @@ PrefabInstance:
       propertyPath: interactImage
       value: 
       objectReference: {fileID: 1158049712}
+    - target: {fileID: 468784167702155494, guid: 3a455d9624dd91442a2c00883d5ffadc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 789485146981409381, guid: 3a455d9624dd91442a2c00883d5ffadc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 958591631182708333, guid: 3a455d9624dd91442a2c00883d5ffadc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1124551445666829275, guid: 3a455d9624dd91442a2c00883d5ffadc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1432141789701084850, guid: 3a455d9624dd91442a2c00883d5ffadc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2832336710223431867, guid: 3a455d9624dd91442a2c00883d5ffadc, type: 3}
       propertyPath: m_Name
       value: PlayerCatGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2832336710223431867, guid: 3a455d9624dd91442a2c00883d5ffadc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252355725309215186, guid: 3a455d9624dd91442a2c00883d5ffadc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3900846928285049573, guid: 3a455d9624dd91442a2c00883d5ffadc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5466240314550743719, guid: 3a455d9624dd91442a2c00883d5ffadc, type: 3}
       propertyPath: m_Sprite
@@ -16392,6 +16436,14 @@ PrefabInstance:
     - target: {fileID: 5466240314550743719, guid: 3a455d9624dd91442a2c00883d5ffadc, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5701361257657769123, guid: 3a455d9624dd91442a2c00883d5ffadc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5999620367823845315, guid: 3a455d9624dd91442a2c00883d5ffadc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6089859095100162738, guid: 3a455d9624dd91442a2c00883d5ffadc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16432,6 +16484,22 @@ PrefabInstance:
     - target: {fileID: 6089859095100162738, guid: 3a455d9624dd91442a2c00883d5ffadc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333373787040172541, guid: 3a455d9624dd91442a2c00883d5ffadc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603577177315399921, guid: 3a455d9624dd91442a2c00883d5ffadc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718565724481594330, guid: 3a455d9624dd91442a2c00883d5ffadc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734525183144904451, guid: 3a455d9624dd91442a2c00883d5ffadc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23555,7 +23623,7 @@ GameObject:
   - component: {fileID: 1644880183}
   - component: {fileID: 1644880185}
   - component: {fileID: 1644880184}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25571,7 +25639,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 63
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_GenerateLinks: 0

@@ -18,13 +18,19 @@ public class CatController : MonoBehaviour
     {
         if (!testCanSee)
         {
-            agent.SetDestination(point);
+            if (agent.enabled)
+            {
+                agent.SetDestination(point);
+            }
         } else
         {
             Vector3 dir = (point - transform.position ).normalized;
             if (!Physics.Raycast(transform.position,dir,blockSightLenght))
             {
-                agent.SetDestination(point);
+                if (agent.enabled)
+                { 
+                    agent.SetDestination(point);
+                }
             }
         }
     }
