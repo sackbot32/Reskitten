@@ -1,12 +1,14 @@
 using UnityEngine;
 using System.Collections.Generic;
 using static UnityEditor.PlayerSettings;
+using Unity.AI.Navigation;
 
 public class CrowdInstanceManager : MonoBehaviour
 {
     public static CrowdInstanceManager instance;
     public List<GameObject> crowdObject = new List<GameObject>();
     public List<CrowdPosition> crowdPositions = new List<CrowdPosition>();
+    public NavMeshSurface surface;
     private void Awake()
     {
         instance = this;
@@ -17,15 +19,26 @@ public class CrowdInstanceManager : MonoBehaviour
         {
             if (crowdObject.Count > 0)
             {
-                bool itemSet = false;
+                //bool itemSet = false;
                 GameObject chosenObject = null;
-                while (!itemSet)
+
+                //while (!itemSet)
+                //{
+                //    int pos = Random.Range(0, crowdObject.Count);
+                //    if (!crowdPositions[pos].HasCrowd())
+                //    {
+                //        chosenObject = crowdObject[0];
+                //        crowdPositions[pos].SetCrowd(chosenObject);
+                //        itemSet = true;
+                //    }
+                //}
+                foreach (CrowdPosition crowd in crowdPositions)
                 {
-                    int pos = Random.Range(0, crowdObject.Count);
-                    if (!crowdPositions[pos].HasCrowd())
+                    if (!crowd.HasCrowd())
                     {
                         chosenObject = crowdObject[0];
-                        crowdPositions[pos].SetCrowd(chosenObject);
+                        crowd.SetCrowd(chosenObject);
+                        break;
                     }
                 }
 
@@ -44,7 +57,7 @@ public class CrowdInstanceManager : MonoBehaviour
         {
             if (crowdObject.Count > 0)
             {
-                bool itemSet = false;
+                //bool itemSet = false;
                 GameObject chosenObject = null;
                 bool assuredSpawn = true;
                 if (!crowdPositions[assuredPos].HasCrowd())
@@ -52,20 +65,32 @@ public class CrowdInstanceManager : MonoBehaviour
                     assuredSpawn = false;
                     chosenObject = crowdObject[0];
                     crowdPositions[assuredPos].SetCrowd(chosenObject);
-                    itemSet = true;
+                    //itemSet = true;
                 }
 
-                while (!itemSet && assuredSpawn)
+                //while (!itemSet && assuredSpawn)
+                //{
+                //    int pos = Random.Range(0, crowdObject.Count);
+                //    if (!crowdPositions[pos].HasCrowd())
+                //    {
+                //        chosenObject = crowdObject[0];
+                //        crowdPositions[pos].SetCrowd(chosenObject);
+                //        itemSet = true;
+                //    }
+                //}
+                if (assuredSpawn)
                 {
-                    int pos = Random.Range(0, crowdObject.Count);
-                    if (!crowdPositions[pos].HasCrowd())
+                    foreach (CrowdPosition crowd in crowdPositions)
                     {
-                        chosenObject = crowdObject[0];
-                        crowdPositions[pos].SetCrowd(chosenObject);
-                        itemSet = true;
+                        if (!crowd.HasCrowd())
+                        {
+                            chosenObject = crowdObject[0];
+                            crowd.SetCrowd(chosenObject);
+                            break;
+                        }
                     }
                 }
-
+                
                 crowdObject.Remove(chosenObject);
 
             }
