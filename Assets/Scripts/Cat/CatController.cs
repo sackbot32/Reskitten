@@ -8,23 +8,30 @@ public class CatController : MonoBehaviour
     public NavMeshAgent agent;
     public float blockSightLenght;
     public bool canJump = false;
+    private Animator anim;
 
     private void Start()
     {
-
+        anim = transform.GetChild(0).gameObject.GetComponent<Animator>();
     }
 
     public void GoToPoint(Vector3 point,bool testCanSee = false)
     {
         if (!testCanSee)
         {
-            agent.SetDestination(point);
+            if (agent.enabled)
+            {
+                agent.SetDestination(point);
+            }
         } else
         {
             Vector3 dir = (point - transform.position ).normalized;
             if (!Physics.Raycast(transform.position,dir,blockSightLenght))
             {
-                agent.SetDestination(point);
+                if (agent.enabled)
+                { 
+                    agent.SetDestination(point);
+                }
             }
         }
     }
@@ -36,6 +43,9 @@ public class CatController : MonoBehaviour
             agent.autoTraverseOffMeshLink = false;
             StartCoroutine(Parabola(agent, 5, 1));
         }
+
+
+        anim.SetFloat("Speed",agent.velocity.magnitude/agent.speed);
     }
 
     IEnumerator Parabola(NavMeshAgent agent, float height, float duration)
