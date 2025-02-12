@@ -10,6 +10,7 @@ public class ToolUser : MonoBehaviour
     public List<GameObject> tools;
     private ITool currentTool;
     private int currentToolIndex;
+    public bool canChange = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -41,49 +42,51 @@ public class ToolUser : MonoBehaviour
         {
             currentTool.UpSecondary();
         }
-
-        if (inputActions.FindAction("1").WasPressedThisFrame())
+        if (canChange)
         {
-            ChangeTool(0);
-        }
-        if (inputActions.FindAction("2").WasPressedThisFrame())
-        {
-            ChangeTool(1);
-        }
-        if (inputActions.FindAction("3").WasPressedThisFrame())
-        {
-            ChangeTool(2);
-        }
-        if (inputActions.FindAction("4").WasPressedThisFrame())
-        {
-            ChangeTool(3);
-        }
-        if (inputActions.FindAction("5").WasPressedThisFrame())
-        {
-            ChangeTool(4);
-        }
-        if (inputActions.FindAction("6").WasPressedThisFrame())
-        {
-            ChangeTool(5);
-        }
-        if (inputActions.FindAction("ToolScroll").ReadValue<float>() < 0)
-        {
-            if(currentToolIndex - 1 < 0)
-            {
-                ChangeTool(tools.Count -1);
-            } else
-            {
-                ChangeTool(currentToolIndex - 1);
-            }
-        }
-        if (inputActions.FindAction("ToolScroll").ReadValue<float>() > 0)
-        {
-            if(currentToolIndex + 1 >= tools.Count)
+            if (inputActions.FindAction("1").WasPressedThisFrame())
             {
                 ChangeTool(0);
-            } else
+            }
+            if (inputActions.FindAction("2").WasPressedThisFrame())
             {
-                ChangeTool(currentToolIndex + 1);
+                ChangeTool(1);
+            }
+            if (inputActions.FindAction("3").WasPressedThisFrame())
+            {
+                ChangeTool(2);
+            }
+            if (inputActions.FindAction("4").WasPressedThisFrame())
+            {
+                ChangeTool(3);
+            }
+            if (inputActions.FindAction("5").WasPressedThisFrame())
+            {
+                ChangeTool(4);
+            }
+            if (inputActions.FindAction("6").WasPressedThisFrame())
+            {
+                ChangeTool(5);
+            }
+            if (inputActions.FindAction("ToolScroll").ReadValue<float>() > 0)
+            {
+                if(currentToolIndex - 1 < 0)
+                {
+                    ChangeTool(tools.Count -1);
+                } else
+                {
+                    ChangeTool(currentToolIndex - 1);
+                }
+            }
+            if (inputActions.FindAction("ToolScroll").ReadValue<float>() < 0)
+            {
+                if(currentToolIndex + 1 >= tools.Count)
+                {
+                    ChangeTool(0);
+                } else
+                {
+                    ChangeTool(currentToolIndex + 1);
+                }
             }
         }
     }

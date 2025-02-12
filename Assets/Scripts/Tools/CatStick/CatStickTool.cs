@@ -75,5 +75,6 @@ public class CatStickTool : MonoBehaviour, ITool
         catController.gameObject.GetComponent<Collider>().enabled = false;
         catController.transform.localPosition = new Vector3(-0.0023f,4e-05f,-0.00571f);
         catController.transform.localRotation = Quaternion.Euler(180,-110,-90);
+        ToolUser.instance.canChange = false;
     }
 }
