@@ -79,6 +79,7 @@ public class FishingRodTool : MonoBehaviour,ITool
             currentHook = Instantiate(hookPrefab,shootPoint.position,Quaternion.identity);
             Rigidbody rb = currentHook.GetComponent<Rigidbody>();
             currentHook.GetComponent<HookCollision>().rodTool = gameObject.GetComponent<FishingRodTool>();
+            currentHook.transform.forward = ray.direction;
             rb.AddForce(dir * shootSpeed);
             StartCoroutine(DestroyAfterTime(timeTillSelfDestruct,currentHook));
         }
