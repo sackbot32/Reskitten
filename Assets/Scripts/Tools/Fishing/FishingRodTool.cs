@@ -12,6 +12,7 @@ public class FishingRodTool : MonoBehaviour,ITool
     public float timeTillSelfDestruct = 5;
     public Sprite toolSprite;
     public LineRenderer lRenderer;
+    private GameObject currentOutlined;
 
     private void Start()
     {
@@ -26,6 +27,40 @@ public class FishingRodTool : MonoBehaviour,ITool
             lRenderer.SetPosition(1, currentHook.transform.position);
         }
 
+        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 100))
+        { 
+            if(hit.collider.tag == "HookPoint" && hit.collider.gameObject.GetComponent<MeshOutline>() != null)
+            {
+                if(currentOutlined != null && currentOutlined != hit.collider.gameObject)
+                {
+                    currentOutlined.GetComponent<MeshOutline>().enabled = false;
+                    currentOutlined = hit.collider.gameObject;
+                    currentOutlined.GetComponent<MeshOutline>().enabled = true;
+                }
+                else
+                {
+                    currentOutlined = hit.collider.gameObject;
+                    currentOutlined.GetComponent<MeshOutline>().enabled = true;
+                }
+            } else
+            {
+                if (currentOutlined != null)
+                { 
+                    currentOutlined.GetComponent<MeshOutline>().enabled = false;
+                    currentOutlined = null;
+                }
+            }
+        }
+        else
+        {
+            if(currentOutlined != null)
+            {
+                currentOutlined.GetComponent<MeshOutline>().enabled = false;
+                currentOutlined = null;
+            }
+        }
          
     }
     public Sprite GetImage()
