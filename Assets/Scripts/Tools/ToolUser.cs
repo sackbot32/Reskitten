@@ -23,27 +23,31 @@ public class ToolUser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inputActions.FindAction("Attack").IsPressed())
+        if(!(PauseHud.instance.pauseGameObject.activeSelf || PauseHud.instance.settingsGameObject.activeSelf))
         {
-            //print("Main being pressed");
-            currentTool.Main();
-            
-        }
-        if (inputActions.FindAction("Attack").WasReleasedThisFrame())
-        {
-            //print("Main being pressed");
-            currentTool.UpMain();
-        }
+            if (inputActions.FindAction("Attack").IsPressed())
+            {
+                //print("Main being pressed");
+                currentTool.Main();
 
-        if (inputActions.FindAction("Secondary").IsPressed())
-        {
-            //print("Secondary being pressed");
-            currentTool.Secondary();
+            }
+            if (inputActions.FindAction("Attack").WasReleasedThisFrame())
+            {
+                //print("Main being pressed");
+                currentTool.UpMain();
+            }
+
+            if (inputActions.FindAction("Secondary").IsPressed())
+            {
+                //print("Secondary being pressed");
+                currentTool.Secondary();
+            }
+            if (inputActions.FindAction("Secondary").WasReleasedThisFrame())
+            {
+                currentTool.UpSecondary();
+            }
         }
-        if (inputActions.FindAction("Secondary").WasReleasedThisFrame())
-        {
-            currentTool.UpSecondary();
-        }
+        
         if (canChange)
         {
             if (inputActions.FindAction("1").WasPressedThisFrame())
