@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6211458067733617178}
   - component: {fileID: 5353236868540347754}
   - component: {fileID: 8171570634422234062}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: FishingRodTool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7974724576406741376}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -311,12 +311,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8101522344482369238, guid: 69d9d000fd19c0f4a9396eee49504435, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8101522344482369238, guid: 69d9d000fd19c0f4a9396eee49504435, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 69d9d000fd19c0f4a9396eee49504435, type: 3}
       propertyPath: m_Name
       value: FishingRod_AssetsHarbor
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 69d9d000fd19c0f4a9396eee49504435, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199648509723448323, guid: 69d9d000fd19c0f4a9396eee49504435, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

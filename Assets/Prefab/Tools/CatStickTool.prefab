@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8986423795009140108}
   - component: {fileID: 935886574371534736}
   - component: {fileID: 3604384089307940002}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CatThingy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2508670067812580748}
   - component: {fileID: 2073451607602161712}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: stringpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 5184206096004754818}
   - component: {fileID: 7161820123758941730}
   - component: {fileID: 4660629175205282880}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -223,7 +223,7 @@ SpringJoint:
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  m_Spring: 10
+  m_Spring: 15
   m_Damper: 0
   m_MinDistance: 0.005
   m_MaxDistance: 0.005
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 4159977945373914432}
   - component: {fileID: 1198234591168834483}
   - component: {fileID: 9067316589864834340}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CatStickTool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,6 +475,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: -6480145061458759334, guid: d7cdf850024f9c94cb69602c9682c446, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4393712619060973594, guid: d7cdf850024f9c94cb69602c9682c446, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -4393712619060973594, guid: d7cdf850024f9c94cb69602c9682c446, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -482,6 +490,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d7cdf850024f9c94cb69602c9682c446, type: 3}
       propertyPath: m_Name
       value: PlumeroReskittenAssets
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d7cdf850024f9c94cb69602c9682c446, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

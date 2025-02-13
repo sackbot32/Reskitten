@@ -73,6 +73,18 @@ public class CatStickTool : MonoBehaviour, ITool
         catController.transform.parent = ballToStick;
         catController.anim.Play("PoseT");
         catController.gameObject.GetComponent<Collider>().enabled = false;
+        catController.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+        foreach (Transform item in catController.transform)
+        {
+            item.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+            if(item.childCount > 0)
+            {
+                foreach (Transform itemChild in item)
+                {
+                    itemChild.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+                }
+            }
+        }
         catController.transform.localPosition = new Vector3(-0.0023f,4e-05f,-0.00571f);
         catController.transform.localRotation = Quaternion.Euler(180,-110,-90);
         ToolUser.instance.canChange = false;
