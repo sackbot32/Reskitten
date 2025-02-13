@@ -136,7 +136,7 @@ MonoBehaviour:
   mintPrefab: {fileID: 1852123980644900007, guid: 46b134a700a07ea46b7a42ee54583d32, type: 3}
   throwPoint: {fileID: 6231130358847208111}
   testThrowForce: 450
-  toolSprite: {fileID: 0}
+  toolSprite: {fileID: 21300000, guid: b27071d92c78a974fa8e9c6746d26c5f, type: 3}
   linePoints: 60
   predictionLength: 5
   lineCompensation: 50
