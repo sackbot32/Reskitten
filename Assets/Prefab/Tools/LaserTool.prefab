@@ -242,7 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 5116290091168335933}
   shootPoint: {fileID: 9135084545990193753}
-  toolSprite: {fileID: 0}
+  toolSprite: {fileID: 21300000, guid: 932570f2547d20448a106016067cb99a, type: 3}
 --- !u!1001 &4680831268196191051
 PrefabInstance:
   m_ObjectHideFlags: 0
