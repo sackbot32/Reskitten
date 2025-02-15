@@ -6,10 +6,9 @@ public class LevelSelectHud : MonoBehaviour
 {
     public InputActionReference pauseInput;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
-        gameObject.SetActive(true);
-        LevelSelectOpen(false);
+
     }
 
     // Update is called once per frame
