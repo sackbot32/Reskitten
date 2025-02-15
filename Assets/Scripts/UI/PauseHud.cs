@@ -8,7 +8,7 @@ public class PauseHud : MonoBehaviour
     public InputActionReference pauseInput;
     public GameObject pauseGameObject;
     public GameObject settingsGameObject;
-
+    public GameObject winScreen;
     private void Awake()
     {
         instance = this;
@@ -23,7 +23,7 @@ public class PauseHud : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pauseInput.action.WasPressedThisFrame())
+        if (pauseInput.action.WasPressedThisFrame() && !winScreen.activeSelf)
         {
             Pause(!(pauseGameObject.activeSelf || settingsGameObject.activeSelf));
         }
@@ -56,5 +56,13 @@ public class PauseHud : MonoBehaviour
     }
 
 
-
+    public void WinScreen()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Time.timeScale = 0f;
+        settingsGameObject.SetActive(false);
+        pauseGameObject.SetActive(false);
+        winScreen.SetActive(true);
+    }
 }

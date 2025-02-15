@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class WinTrigger : MonoBehaviour
 {
+    private bool hasWon;
     private void OnTriggerStay(Collider other)
     {
         if(other.tag == "Player")
         {
-            if (!ToolUser.instance.canChange)
+            if (!ToolUser.instance.canChange && !hasWon)
             {
-                print("Win");
+                hasWon = true;
+                PauseHud.instance.WinScreen();
             }
         }
     }

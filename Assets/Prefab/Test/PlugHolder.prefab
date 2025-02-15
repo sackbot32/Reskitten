@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5376110625442881809}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: PlugPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 4826193128451487171}
   - component: {fileID: 7309253065700329706}
   - component: {fileID: 8664980775799191293}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: PlugHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

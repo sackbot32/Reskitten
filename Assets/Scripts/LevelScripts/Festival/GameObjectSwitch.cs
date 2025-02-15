@@ -37,7 +37,9 @@ public class GameObjectSwitch : MonoBehaviour, ISwitchInput
             currentIndex = input;
             foreach (GameObject child in gameObjectParent)
             {
+                
                 child.SetActive(false);
+                
             }
             gameObjectParent[input].SetActive(true);
             if(conditionFullfilledPos == input)
