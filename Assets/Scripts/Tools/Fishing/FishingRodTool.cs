@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
@@ -13,6 +14,14 @@ public class FishingRodTool : MonoBehaviour,ITool
     public Sprite toolSprite;
     public LineRenderer lRenderer;
     private GameObject currentOutlined;
+    [SerializeField]
+    private AudioSource fishingRodSource;
+    [SerializeField]
+    private AudioSource equipSource;
+    public List<AudioClip> soundList = new List<AudioClip>();
+    //0 shoot sound
+    //1 reel sound
+    //2 equip sound
 
     private void Start()
     {
@@ -72,7 +81,7 @@ public class FishingRodTool : MonoBehaviour,ITool
     {
         if (currentHook == null) 
         {
-
+            SFXPlayer.StaticPlaySound(fishingRodSource, soundList[0], true);
             lRenderer.enabled = true;
             Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             Vector3 dir = (ray.GetPoint(10) - shootPoint.position).normalized;
@@ -109,13 +118,16 @@ public class FishingRodTool : MonoBehaviour,ITool
     {
         if (currentHook != null)
         {
+            fishingRodSource.loop = true;
+            SFXPlayer.StaticPlaySound(fishingRodSource, soundList[1], true);
             PlayerManager.instance.playerRb.useGravity = false;
             Rigidbody rb = currentHook.GetComponent<Rigidbody>();
             rb.isKinematic = true;
             
             Vector3 toPlayerDir = (PlayerManager.instance.player.transform.position - currentHook.transform.position).normalized;
             PlayerManager.instance.player.transform.DOMove(currentHook.transform.position + toPlayerDir * 2, travelTime).OnComplete(() => {
-
+                fishingRodSource.loop = false;
+                fishingRodSource.Stop();
                 lRenderer.enabled = false;
                 PlayerManager.instance.playerRb.linearVelocity = Vector3.zero;
                 PlayerManager.instance.playerRb.useGravity = true;
@@ -134,11 +146,17 @@ public class FishingRodTool : MonoBehaviour,ITool
 
     public void OnEquip()
     {
-
+        if(equipSource != null)
+        {
+            SFXPlayer.StaticPlaySound(equipSource, soundList[2], true);
+        }
     }
 
     public void OnUnequip()
     {
-
+        if (equipSource != null)
+        {
+            SFXPlayer.StaticPlaySound(equipSource, soundList[2], true);
+        }
     }
 }

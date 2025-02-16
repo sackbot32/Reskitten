@@ -3,6 +3,8 @@ using UnityEngine;
 public class CatStickToStick : MonoBehaviour
 {
     public CatStickTool tool;
+    [SerializeField]
+    private AudioSource catchSource;
     private void OnTriggerEnter(Collider other)
     {
         CatController controller = other.gameObject.GetComponent<CatController>();
@@ -10,6 +12,7 @@ public class CatStickToStick : MonoBehaviour
         {
             if (controller.enabled)
             {
+                SFXPlayer.StaticPlaySound(catchSource, catchSource.clip, true);
                 tool.StickCatToTool(controller, transform);
             }
 

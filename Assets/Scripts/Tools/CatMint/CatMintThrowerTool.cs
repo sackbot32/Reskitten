@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
 
 public class CatMintThrowerTool : MonoBehaviour, ITool
@@ -18,6 +20,14 @@ public class CatMintThrowerTool : MonoBehaviour, ITool
 
     private Vector3 dir;
     private float ballMass;
+    [Header("Sound source")]
+    [SerializeField]
+    private AudioSource throwSource;
+    [SerializeField]
+    private AudioSource equipSource;
+    public List<AudioClip> soundList = new List<AudioClip>();
+    //0 throw sound
+    //1 equip sound
     private void Start()
     {
         lRenderer = GetComponent<LineRenderer>();
@@ -36,6 +46,10 @@ public class CatMintThrowerTool : MonoBehaviour, ITool
     {
         if(currentMint == null)
         {
+            if(throwSource != null)
+            {
+                SFXPlayer.StaticPlaySound(throwSource, soundList[0], true);
+            }
             Rigidbody rb; 
             currentMint = Instantiate(mintPrefab,throwPoint.position,throwPoint.rotation);
             rb = currentMint.GetComponent<Rigidbody>();
@@ -100,11 +114,17 @@ public class CatMintThrowerTool : MonoBehaviour, ITool
 
     public void OnEquip()
     {
-
+        if (equipSource != null)
+        {
+            SFXPlayer.StaticPlaySound(throwSource, soundList[1], true);
+        }
     }
 
     public void OnUnequip()
     {
-        
+        if (equipSource != null)
+        {
+            SFXPlayer.StaticPlaySound(throwSource, soundList[1], true);
+        }
     }
 }

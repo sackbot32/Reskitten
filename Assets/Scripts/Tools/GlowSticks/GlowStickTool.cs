@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -14,7 +15,16 @@ public class GlowStickTool : MonoBehaviour, ITool
     public Color[] colorModes;
     //0 None
     //1 Has public
-
+    [Header("Sound source")]
+    [SerializeField]
+    private AudioSource userSource;
+    [SerializeField]
+    private AudioSource equipSource;
+    public List<AudioClip> soundList = new List<AudioClip>();
+    //0 fail sound
+    //1 selectCrowd sound
+    //2 selectPos sound
+    //3 equip sound
     public Sprite GetImage()
     {
         return toolSprite;
@@ -42,20 +52,31 @@ public class GlowStickTool : MonoBehaviour, ITool
                     if (hit.collider.gameObject.GetComponent<CrowdInstance>() != null) 
                     {
                         used = true;
+                        SFXPlayer.StaticPlaySound(userSource, soundList[1], true);
                         selectedInstance = hit.collider.gameObject.GetComponent<CrowdInstance>();
                         stickMesh.materials[2].SetColor("_EmissionColor", colorModes[1] * intensity);
+                    } else
+                    {
+                        SFXPlayer.StaticPlaySound(userSource, soundList[0], true);
                     }
                 } else
                 {
                     if (hit.collider.gameObject.GetComponent<CrowdPosition>() != null)
                     {
                         used = true;
+                        SFXPlayer.StaticPlaySound(userSource, soundList[2], true);
                         selectedInstance.GetComponent<MeshOutline>().enabled = false;
                         hit.collider.gameObject.GetComponent<CrowdPosition>().SetCrowd(selectedInstance.gameObject);
                         stickMesh.materials[2].SetColor("_EmissionColor", colorModes[0] * intensity);
                         selectedInstance = null;
+                    } else
+                    {
+                        SFXPlayer.StaticPlaySound(userSource, soundList[0], true);
                     }
                 }
+            } else
+            {
+                SFXPlayer.StaticPlaySound(userSource, soundList[0], true);
             }
         }
         
@@ -155,9 +176,17 @@ public class GlowStickTool : MonoBehaviour, ITool
 
     public void OnEquip()
     {
+        if(equipSource != null)
+        {
+            SFXPlayer.StaticPlaySound(equipSource,soundList[3],true);
+        }
     }
     public void OnUnequip()
     {
-
+        if (equipSource != null)
+        {
+            SFXPlayer.StaticPlaySound(equipSource, soundList[3], true);
+        }
     }
+
 }

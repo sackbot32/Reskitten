@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -5,7 +6,11 @@ public class HookCollision : MonoBehaviour
 {
     public FishingRodTool rodTool;
     RaycastHit hit;
-
+    [SerializeField]
+    private AudioSource touchSource;
+    public List<AudioClip> soundList = new List<AudioClip>();
+    //0 goodHit sound
+    //1 badHit sound
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -16,21 +21,24 @@ public class HookCollision : MonoBehaviour
             {
                 if (hit.collider.gameObject == PlayerManager.instance.player)
                 {
+                    SFXPlayer.StaticPlaySound(touchSource, soundList[0], true);
                     rodTool.TowardHook();
                 }
                 else
                 {
-
+                    SFXPlayer.StaticPlaySound(touchSource, soundList[1], true);
                     rodTool.lRenderer.enabled = false;
                     Destroy(gameObject);
                 }
             }
             else
             {
+                SFXPlayer.StaticPlaySound(touchSource, soundList[0], true);
                 rodTool.TowardHook();
             }
         } else
         {
+            SFXPlayer.StaticPlaySound(touchSource, soundList[1], true);
             rodTool.lRenderer.enabled = false;
             Destroy(gameObject);
         }

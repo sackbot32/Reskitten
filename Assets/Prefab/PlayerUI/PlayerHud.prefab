@@ -240,6 +240,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 948358483840770749}
+        m_TargetAssemblyTypeName: SFXPlayer, Assembly-CSharp
+        m_MethodName: PlaySoundOnIndexRandomPitch
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &640954107127968965
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,6 +492,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 948358483840770749}
+        m_TargetAssemblyTypeName: SFXPlayer, Assembly-CSharp
+        m_MethodName: PlaySoundOnIndexRandomPitch
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1211,6 +1235,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 948358483840770749}
+        m_TargetAssemblyTypeName: SFXPlayer, Assembly-CSharp
+        m_MethodName: PlaySoundOnIndexRandomPitch
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2288791179356096879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1305,6 +1341,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: ChangeSfxVol
         m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 948358483840770749}
+        m_TargetAssemblyTypeName: SFXPlayer, Assembly-CSharp
+        m_MethodName: PlaySoundOnIndex
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1727,6 +1775,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 948358483840770749}
+        m_TargetAssemblyTypeName: SFXPlayer, Assembly-CSharp
+        m_MethodName: PlaySoundOnIndexRandomPitch
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 6924886305445631328}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -2281,6 +2341,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 948358483840770749}
+        m_TargetAssemblyTypeName: SFXPlayer, Assembly-CSharp
+        m_MethodName: PlaySoundOnIndexRandomPitch
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5224490467764078679
 GameObject:
   m_ObjectHideFlags: 0
@@ -2599,6 +2671,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 948358483840770749}
+        m_TargetAssemblyTypeName: SFXPlayer, Assembly-CSharp
+        m_MethodName: PlaySoundOnIndexRandomPitch
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 20449235226040915}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -3998,6 +4082,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 948358483840770749}
+        m_TargetAssemblyTypeName: SFXPlayer, Assembly-CSharp
+        m_MethodName: PlaySoundOnIndexRandomPitch
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8425941954064146551
 GameObject:
   m_ObjectHideFlags: 0
@@ -4167,6 +4263,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5803797695957131767}
   - {fileID: 667194062212432286}
   - {fileID: 9033623377047884526}
   - {fileID: 6434308487143172095}
@@ -4696,6 +4793,79 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5215355266447620053, guid: bde3f2d3d66645847a2621bf53cff57a, type: 3}
   m_PrefabInstance: {fileID: 4716143718723795767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6487212086823278516
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6410763825953259644}
+    m_Modifications:
+    - target: {fileID: 759998124998112835, guid: 194471e5467c0404aa505c15647fe87d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 572.028
+      objectReference: {fileID: 0}
+    - target: {fileID: 759998124998112835, guid: 194471e5467c0404aa505c15647fe87d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 435.0542
+      objectReference: {fileID: 0}
+    - target: {fileID: 759998124998112835, guid: 194471e5467c0404aa505c15647fe87d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 23.12326
+      objectReference: {fileID: 0}
+    - target: {fileID: 759998124998112835, guid: 194471e5467c0404aa505c15647fe87d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 759998124998112835, guid: 194471e5467c0404aa505c15647fe87d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 759998124998112835, guid: 194471e5467c0404aa505c15647fe87d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 759998124998112835, guid: 194471e5467c0404aa505c15647fe87d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 759998124998112835, guid: 194471e5467c0404aa505c15647fe87d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 759998124998112835, guid: 194471e5467c0404aa505c15647fe87d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 759998124998112835, guid: 194471e5467c0404aa505c15647fe87d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851498684079244367, guid: 194471e5467c0404aa505c15647fe87d, type: 3}
+      propertyPath: m_Name
+      value: PlayerUISfxSource
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 194471e5467c0404aa505c15647fe87d, type: 3}
+--- !u!114 &948358483840770749 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6281969531866215689, guid: 194471e5467c0404aa505c15647fe87d, type: 3}
+  m_PrefabInstance: {fileID: 6487212086823278516}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d68262d8b4e2c784ebd0fae6cd87d9a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &5803797695957131767 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 759998124998112835, guid: 194471e5467c0404aa505c15647fe87d, type: 3}
+  m_PrefabInstance: {fileID: 6487212086823278516}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7091987037860014438
 PrefabInstance:

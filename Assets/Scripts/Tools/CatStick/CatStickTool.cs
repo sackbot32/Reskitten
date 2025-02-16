@@ -8,7 +8,8 @@ public class CatStickTool : MonoBehaviour, ITool
     private LineRenderer lRenderer;
     public Transform startPoint;
     public Transform endPoint;
-
+    [SerializeField]
+    private AudioSource equipSource;
     public Sprite GetImage()
     {
         return toolSprite;
@@ -58,12 +59,18 @@ public class CatStickTool : MonoBehaviour, ITool
 
     public void OnEquip()
     {
-
+        if (equipSource != null)
+        {
+            SFXPlayer.StaticPlaySound(equipSource, equipSource.clip, true);
+        }
     }
 
     public void OnUnequip()
     {
-
+        if (equipSource != null)
+        {
+            SFXPlayer.StaticPlaySound(equipSource, equipSource.clip, true);
+        }
     }
 
     public void StickCatToTool(CatController catController,Transform ballToStick)

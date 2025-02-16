@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,7 +7,14 @@ public class LaserTool : MonoBehaviour, ITool
     public LineRenderer lineRenderer;
     public Transform shootPoint;
     public Sprite toolSprite;
-
+    [SerializeField]
+    private AudioSource turnSource;
+    [SerializeField]
+    private AudioSource equipSource;
+    public List<AudioClip> soundList = new List<AudioClip>();
+    //0 turnOn sound
+    //1 turnOff sound
+    //2 equip sound
     public Sprite GetImage()
     {
         return toolSprite;
@@ -25,11 +33,19 @@ public class LaserTool : MonoBehaviour, ITool
     }
     public void Main()
     {
+        if (turnSource != null)
+        {
+            SFXPlayer.StaticPlaySound(turnSource, soundList[0],true);
+        }
         lineRenderer.enabled = true;
     }
 
     public void UpMain()
     {
+        if (turnSource != null)
+        {
+            SFXPlayer.StaticPlaySound(turnSource, soundList[1], true);
+        }
         lineRenderer.enabled = false;
     }
 
@@ -65,10 +81,16 @@ public class LaserTool : MonoBehaviour, ITool
 
     public void OnEquip()
     {
-
+        if (equipSource != null)
+        {
+            SFXPlayer.StaticPlaySound(equipSource, soundList[2], true);
+        }
     }
     public void OnUnequip()
     {
-
+        if (equipSource != null)
+        {
+            SFXPlayer.StaticPlaySound(equipSource, soundList[2], true);
+        }
     }
 }

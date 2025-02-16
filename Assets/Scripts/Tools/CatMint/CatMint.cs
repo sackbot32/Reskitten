@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CatMint : MonoBehaviour
@@ -8,9 +10,12 @@ public class CatMint : MonoBehaviour
     private Collider mintCollider;
     [SerializeField]
     private Transform feet;
-
+    public float destructionTime = 15f;
+    [SerializeField]
+    private AudioSource touchSource;
     private void Start()
     {
+        StartCoroutine(DestroyAfterTime());
         mintCollider = GetComponent<Collider>();
         rb = GetComponent<Rigidbody>();
     }
@@ -28,6 +33,7 @@ public class CatMint : MonoBehaviour
         Debug.DrawRay(feet.position, -transform.up * floorDetect, Color.red);
         if (Physics.Raycast(feet.position,-Vector3.up,out RaycastHit hit,floorDetect) && !hasHitGround)
         {
+            SFXPlayer.StaticPlaySound(touchSource, touchSource.clip, true);
             hasHitGround = true;
             rb.isKinematic = true;
             transform.position = hit.point - feet.localPosition;
@@ -38,5 +44,11 @@ public class CatMint : MonoBehaviour
         {
             CatManager.instance.currentCat.GoToPoint(hit.point);
         }
+    }
+
+    private IEnumerator DestroyAfterTime()
+    {
+        yield return new WaitForSeconds(destructionTime);
+        Destroy(gameObject);
     }
 }
