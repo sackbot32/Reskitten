@@ -41,7 +41,7 @@ public class LevelSelectHud : MonoBehaviour
     public void ChangeScene(int index)
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(index);
+        StartCoroutine(LoadingManager.instance.SceneChangeWithLoadScreen(index));
     }
 
 }

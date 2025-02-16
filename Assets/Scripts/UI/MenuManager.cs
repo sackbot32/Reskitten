@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
@@ -22,7 +23,7 @@ public class MenuManager : MonoBehaviour
     public void ChangeScene(string sceneName)
     {
         //AudioManager.Instance?.PlayPaper();
-        SceneManager.LoadScene(sceneName);
+        StartCoroutine(LoadingManager.instance.SceneChangeWithLoadScreen(sceneName));
     }
 
 
