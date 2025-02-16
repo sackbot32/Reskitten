@@ -788,8 +788,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1572799676961013396}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.5999832, y: -0.8100004}
   m_SizeDelta: {x: 23.1659, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1222,7 +1222,7 @@ GameObject:
   - component: {fileID: 7075380306898021374}
   - component: {fileID: 8606130469266127779}
   m_Layer: 5
-  m_Name: Slider (1)
+  m_Name: SliderSfx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1300,7 +1300,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9050556886745821642}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ChangeSfxVol
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2302433033431603670
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,7 +1324,7 @@ GameObject:
   - component: {fileID: 6303300348145399836}
   - component: {fileID: 3723159720141730752}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: SliderMus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1390,7 +1402,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9050556886745821642}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ChangeMusicVol
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2619671369594266704
 GameObject:
   m_ObjectHideFlags: 0
@@ -2657,7 +2681,7 @@ RectTransform:
   m_Father: {fileID: 9035982302362619889}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3285,7 +3309,6 @@ GameObject:
   - component: {fileID: 7983297856722934353}
   - component: {fileID: 7095584808778891988}
   - component: {fileID: 2081291247183586179}
-  - component: {fileID: 1223271957932750260}
   m_Layer: 5
   m_Name: ToolHud
   m_TagString: Untagged
@@ -3359,23 +3382,6 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
---- !u!114 &1223271957932750260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7209716751560483997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!1 &7308877331183486860
 GameObject:
   m_ObjectHideFlags: 0
@@ -3545,7 +3551,7 @@ RectTransform:
   m_Father: {fileID: 9016653737687496457}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4140,6 +4146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6410763825953259644}
   - component: {fileID: 7147191677463099307}
+  - component: {fileID: 9050556886745821642}
   m_Layer: 0
   m_Name: PlayerHud
   m_TagString: Untagged
@@ -4182,6 +4189,23 @@ MonoBehaviour:
   pauseGameObject: {fileID: 20449235226040915}
   settingsGameObject: {fileID: 6924886305445631328}
   winScreen: {fileID: 3056369488417144724}
+--- !u!114 &9050556886745821642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8850230338147884636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0896f4035ea1c2489a3d375b9077900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 0f1a10cf267e55642b6f7daedf637b19, type: 2}
+  musicVolumeMultiplier: 1
+  sfxVolumeMultiplier: 1
+  music: {fileID: 3723159720141730752}
+  sfx: {fileID: 8606130469266127779}
 --- !u!1 &9049521870294343524
 GameObject:
   m_ObjectHideFlags: 0
@@ -4214,8 +4238,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6184012446322395085}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.5999832, y: -0.8100004}
   m_SizeDelta: {x: 23.1659, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
