@@ -146,7 +146,12 @@ public class FishingRodTool : MonoBehaviour,ITool
 
     public void OnEquip()
     {
-        if(equipSource != null)
+        if (currentOutlined != null)
+        {
+            currentOutlined.GetComponent<MeshOutline>().enabled = false;
+            currentOutlined = null;
+        }
+        if (equipSource != null)
         {
             SFXPlayer.StaticPlaySound(equipSource, soundList[2], true);
         }
@@ -154,6 +159,11 @@ public class FishingRodTool : MonoBehaviour,ITool
 
     public void OnUnequip()
     {
+        if (currentOutlined != null)
+        {
+            currentOutlined.GetComponent<MeshOutline>().enabled = false;
+            currentOutlined = null;
+        }
         if (equipSource != null)
         {
             SFXPlayer.StaticPlaySound(equipSource, soundList[2], true);

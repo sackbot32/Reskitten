@@ -176,13 +176,23 @@ public class GlowStickTool : MonoBehaviour, ITool
 
     public void OnEquip()
     {
-        if(equipSource != null)
+        if (currentOutlined != null)
+        {
+            currentOutlined.GetComponent<MeshOutline>().enabled = false;
+            currentOutlined = null;
+        }
+        if (equipSource != null)
         {
             SFXPlayer.StaticPlaySound(equipSource,soundList[3],true);
         }
     }
     public void OnUnequip()
     {
+        if (currentOutlined != null)
+        {
+            currentOutlined.GetComponent<MeshOutline>().enabled = false;
+            currentOutlined = null;
+        }
         if (equipSource != null)
         {
             SFXPlayer.StaticPlaySound(equipSource, soundList[3], true);
