@@ -6,7 +6,6 @@ public class PlugTrigger : MonoBehaviour
     public Transform plugPosition;
     public UnityEvent interactPlugInEvent;
     public UnityEvent interactPlugOffEvent;
-
     private void OnTriggerEnter(Collider other)
     {
         

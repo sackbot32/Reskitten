@@ -7,6 +7,7 @@ public class InteractAction : MonoBehaviour,IInteract
     public Sprite interactImage;
     public UnityEvent interactEvent;
     private bool doing;
+    public AudioSource source;
     public void EndInteraction(bool mode = false)
     {
          doing = false;
@@ -26,6 +27,7 @@ public class InteractAction : MonoBehaviour,IInteract
     {
         if (!doing)
         {
+            SFXPlayer.StaticPlaySound(source, source.clip, true);
             interactEvent.Invoke();
             doing = true;
         }
