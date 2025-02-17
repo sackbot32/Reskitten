@@ -10,6 +10,13 @@ public class CatStickTool : MonoBehaviour, ITool
     public Transform endPoint;
     [SerializeField]
     private AudioSource equipSource;
+
+    private Vector3 endOgPos;
+
+    private void OnValidate()
+    {
+        endOgPos = endPoint.localPosition;
+    }
     public Sprite GetImage()
     {
         return toolSprite;
@@ -59,6 +66,10 @@ public class CatStickTool : MonoBehaviour, ITool
 
     public void OnEquip()
     {
+        if(endOgPos != null)
+        {
+            endPoint.localPosition = endOgPos;
+        }
         if (equipSource != null)
         {
             SFXPlayer.StaticPlaySound(equipSource, equipSource.clip, true);
@@ -67,6 +78,7 @@ public class CatStickTool : MonoBehaviour, ITool
 
     public void OnUnequip()
     {
+        endPoint.localPosition = endOgPos;
         if (equipSource != null)
         {
             SFXPlayer.StaticPlaySound(equipSource, equipSource.clip, true);
