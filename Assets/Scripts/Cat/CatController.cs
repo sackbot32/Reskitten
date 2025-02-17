@@ -70,17 +70,20 @@ public class CatController : MonoBehaviour
             agent.autoTraverseOffMeshLink = false;
             StartCoroutine(Parabola(agent, 5, 1));
         }
-
-        if (!agent.pathPending)
+        if (agent.enabled)
         {
-            if (agent.remainingDistance <= agent.stoppingDistance)
+            if (!agent.pathPending)
             {
-                if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
+                if (agent.remainingDistance <= agent.stoppingDistance)
                 {
-                    hasMeowed = false;
+                    if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
+                    {
+                        hasMeowed = false;
+                    }
                 }
             }
         }
+        
 
 
         anim.SetFloat("Speed",agent.velocity.magnitude/agent.speed);

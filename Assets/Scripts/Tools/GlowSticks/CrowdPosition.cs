@@ -7,6 +7,7 @@ public class CrowdPosition : MonoBehaviour
     public float travelTime;
     private GameObject currentCrowd;
 
+
     private void Awake()
     {
         posForCrowd = transform.GetChild(0).transform;
