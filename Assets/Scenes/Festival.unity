@@ -27206,7 +27206,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1290660043158391447, guid: ecda5e7e7aa9e7746be1df01f94b9b7b, type: 3}
       propertyPath: m_Name
-      value: LoadingManager
+      value: PermanentManager
       objectReference: {fileID: 0}
     - target: {fileID: 2557744933177994031, guid: ecda5e7e7aa9e7746be1df01f94b9b7b, type: 3}
       propertyPath: m_LocalPosition.x
