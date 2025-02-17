@@ -6,6 +6,7 @@ public class ConditionList : MonoBehaviour
 {
     public static ConditionList instance;
     public List<bool> conditions = new List<bool>();
+    private bool doOnce;
 
     public UnityEvent conditionFullfilledEvent;
 
@@ -19,8 +20,9 @@ public class ConditionList : MonoBehaviour
     public void SetConditionTrue(int conditionPos)
     {
         conditions[conditionPos] = true;
-        if (CheckConditions())
+        if (CheckConditions() && !doOnce)
         {
+            doOnce = true;
             conditionFullfilledEvent.Invoke();
         }
     }

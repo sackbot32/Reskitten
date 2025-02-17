@@ -21,12 +21,14 @@ public class CrowdPosition : MonoBehaviour
             {
                 newCrowd.GetComponent<CrowdInstance>().currentPosition.RemoveCrowd(newCrowd);
             }
+            CrowdInstanceManager.instance.AddToMovingCrowd(newCrowd);
             newCrowd.GetComponent<CrowdInstance>().currentPosition = gameObject.GetComponent<CrowdPosition>();
             newCrowd.gameObject.transform.DOMove(posForCrowd.position, travelTime).OnComplete(() =>
             {
                 if (CrowdInstanceManager.instance != null)
                 {
-                    CrowdInstanceManager.instance.surface.BuildNavMesh();
+                    //CrowdInstanceManager.instance.surface.BuildNavMesh();
+                    CrowdInstanceManager.instance.RemoveMovingCrowd(newCrowd);
                 }
             });
             

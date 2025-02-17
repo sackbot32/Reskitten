@@ -8,6 +8,7 @@ public class CrowdInstanceManager : MonoBehaviour
     public static CrowdInstanceManager instance;
     public List<GameObject> crowdObject = new List<GameObject>();
     public List<CrowdPosition> crowdPositions = new List<CrowdPosition>();
+    private List<GameObject> movingCrowd = new List<GameObject>();
     public NavMeshSurface surface;
     private void Awake()
     {
@@ -98,6 +99,20 @@ public class CrowdInstanceManager : MonoBehaviour
             {
                 print("No crowd left");
             }
+        }
+    }
+
+    public void AddToMovingCrowd(GameObject crowd)
+    {
+        movingCrowd.Add(crowd);
+    }
+
+    public void RemoveMovingCrowd(GameObject crowd)
+    {
+        movingCrowd.Remove(crowd);
+        if(movingCrowd.Count <= 0)
+        {
+            surface.BuildNavMesh();
         }
     }
 }

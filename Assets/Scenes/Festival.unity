@@ -17311,18 +17311,18 @@ MonoBehaviour:
   crowdPositions:
   - {fileID: 569457093}
   - {fileID: 1092328672}
-  - {fileID: 1251654361}
-  - {fileID: 651108455}
-  - {fileID: 726486684}
-  - {fileID: 839007930}
-  - {fileID: 932630413}
-  - {fileID: 1988771652}
-  - {fileID: 1911577644}
-  - {fileID: 727347813}
   - {fileID: 700254060}
-  - {fileID: 2138345436}
-  - {fileID: 1771910158}
+  - {fileID: 932630413}
+  - {fileID: 651108455}
+  - {fileID: 727347813}
+  - {fileID: 1911577644}
+  - {fileID: 726486684}
   - {fileID: 482784393}
+  - {fileID: 1251654361}
+  - {fileID: 1771910158}
+  - {fileID: 1988771652}
+  - {fileID: 2138345436}
+  - {fileID: 839007930}
   surface: {fileID: 1959153438}
 --- !u!4 &692216992 stripped
 Transform:
@@ -40446,16 +40446,16 @@ MonoBehaviour:
   crowdCallList:
   - hasAssurePos: 1
     assuredPos: 0
-    amount: 2
+    amount: 1
   - hasAssurePos: 1
     assuredPos: 0
-    amount: 3
+    amount: 1
   - hasAssurePos: 0
     assuredPos: 0
-    amount: 4
+    amount: 1
   - hasAssurePos: 0
     assuredPos: 0
-    amount: 5
+    amount: 11
 --- !u!1001 &1716161489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44673,7 +44673,7 @@ MonoBehaviour:
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 63
-  m_UseGeometry: 0
+  m_UseGeometry: 1
   m_DefaultArea: 0
   m_GenerateLinks: 0
   m_IgnoreNavMeshAgent: 1
