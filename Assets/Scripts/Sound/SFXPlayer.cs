@@ -41,7 +41,11 @@ public class SFXPlayer : MonoBehaviour
         if (audioClipList.Count > index)
         {
             audioSource.pitch = 1f;
-            audioSource.PlayOneShot(audioClipList[index]);
+            if(!audioSource.isPlaying)
+            {
+                audioSource.PlayOneShot(audioClipList[index]);
+            }
+            
         }
     }
 
