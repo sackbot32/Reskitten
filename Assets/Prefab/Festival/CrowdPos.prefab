@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 6479061407604298960}
   - component: {fileID: 568837478929549404}
   - component: {fileID: 4237754908528878676}
+  - component: {fileID: 7591584848678945362}
   m_Layer: 3
   m_Name: CrowdPos
   m_TagString: Untagged
@@ -434,6 +435,24 @@ MonoBehaviour:
   startValue: 20
   finishValue: 40
   duration: 1
+--- !u!114 &7591584848678945362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8017191813201948337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60be6b012defe6e40b5679b944f76cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorProperty: _EmissionColor
+  intensity: 15
+  min: 0
+  meshObject: {fileID: 8779972408147049857}
+  materialIndex: 1
+  timeToChange: 1
 --- !u!1001 &7933424732617531653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -518,5 +537,10 @@ PrefabInstance:
 --- !u!4 &7607589945347802862 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a4dd27390f1e7934488aae15c295fe07, type: 3}
+  m_PrefabInstance: {fileID: 7933424732617531653}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8779972408147049857 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: a4dd27390f1e7934488aae15c295fe07, type: 3}
   m_PrefabInstance: {fileID: 7933424732617531653}
   m_PrefabAsset: {fileID: 0}

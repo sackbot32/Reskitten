@@ -1,12 +1,13 @@
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CrowdPosition : MonoBehaviour
 {
     private Transform posForCrowd;
     public float travelTime;
     private GameObject currentCrowd;
-
 
     private void Awake()
     {
