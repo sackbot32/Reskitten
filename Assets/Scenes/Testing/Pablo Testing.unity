@@ -928,6 +928,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  source: {fileID: 0}
 --- !u!1 &436703273
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,6 +1418,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  source: {fileID: 0}
 --- !u!43 &546860710
 Mesh:
   m_ObjectHideFlags: 0
@@ -1805,7 +1807,7 @@ PrefabInstance:
       objectReference: {fileID: 546860710}
     - target: {fileID: 5449230827332372148, guid: cb58b6ea58e20384e94b1dc8373fbeff, type: 3}
       propertyPath: m_VersionIndex
-      value: 1227
+      value: 1236
       objectReference: {fileID: 0}
     - target: {fileID: 8017191813201948337, guid: cb58b6ea58e20384e94b1dc8373fbeff, type: 3}
       propertyPath: m_Name
@@ -3081,7 +3083,7 @@ PrefabInstance:
       objectReference: {fileID: 2040862671}
     - target: {fileID: 5449230827332372148, guid: cb58b6ea58e20384e94b1dc8373fbeff, type: 3}
       propertyPath: m_VersionIndex
-      value: 1227
+      value: 1236
       objectReference: {fileID: 0}
     - target: {fileID: 8017191813201948337, guid: cb58b6ea58e20384e94b1dc8373fbeff, type: 3}
       propertyPath: m_Name
@@ -3154,7 +3156,7 @@ PrefabInstance:
       objectReference: {fileID: 277224212}
     - target: {fileID: 5449230827332372148, guid: cb58b6ea58e20384e94b1dc8373fbeff, type: 3}
       propertyPath: m_VersionIndex
-      value: 1227
+      value: 1236
       objectReference: {fileID: 0}
     - target: {fileID: 8017191813201948337, guid: cb58b6ea58e20384e94b1dc8373fbeff, type: 3}
       propertyPath: m_Name
@@ -3966,6 +3968,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1606568170}
     m_Modifications:
+    - target: {fileID: 568837478929549404, guid: cb58b6ea58e20384e94b1dc8373fbeff, type: 3}
+      propertyPath: getChilds
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2877271219213527960, guid: cb58b6ea58e20384e94b1dc8373fbeff, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -4016,7 +4022,7 @@ PrefabInstance:
       objectReference: {fileID: 638580608}
     - target: {fileID: 5449230827332372148, guid: cb58b6ea58e20384e94b1dc8373fbeff, type: 3}
       propertyPath: m_VersionIndex
-      value: 1227
+      value: 1236
       objectReference: {fileID: 0}
     - target: {fileID: 8017191813201948337, guid: cb58b6ea58e20384e94b1dc8373fbeff, type: 3}
       propertyPath: m_Name
@@ -4026,6 +4032,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 638580608}
+    - target: {fileID: 8779972408147049857, guid: cb58b6ea58e20384e94b1dc8373fbeff, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4832,7 +4842,7 @@ PrefabInstance:
       objectReference: {fileID: 2090563698}
     - target: {fileID: 5449230827332372148, guid: cb58b6ea58e20384e94b1dc8373fbeff, type: 3}
       propertyPath: m_VersionIndex
-      value: 1227
+      value: 1236
       objectReference: {fileID: 0}
     - target: {fileID: 8017191813201948337, guid: cb58b6ea58e20384e94b1dc8373fbeff, type: 3}
       propertyPath: m_Name
@@ -5758,6 +5768,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  source: {fileID: 0}
 --- !u!65 &1598059593
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5890,7 +5901,7 @@ PrefabInstance:
       objectReference: {fileID: 1413875459}
     - target: {fileID: 5449230827332372148, guid: cb58b6ea58e20384e94b1dc8373fbeff, type: 3}
       propertyPath: m_VersionIndex
-      value: 1227
+      value: 1236
       objectReference: {fileID: 0}
     - target: {fileID: 8017191813201948337, guid: cb58b6ea58e20384e94b1dc8373fbeff, type: 3}
       propertyPath: m_Name
@@ -6844,7 +6855,7 @@ PrefabInstance:
       objectReference: {fileID: 1469507198}
     - target: {fileID: 5449230827332372148, guid: cb58b6ea58e20384e94b1dc8373fbeff, type: 3}
       propertyPath: m_VersionIndex
-      value: 1227
+      value: 1236
       objectReference: {fileID: 0}
     - target: {fileID: 8017191813201948337, guid: cb58b6ea58e20384e94b1dc8373fbeff, type: 3}
       propertyPath: m_Name
@@ -7087,7 +7098,7 @@ PrefabInstance:
       objectReference: {fileID: 11333874}
     - target: {fileID: 5449230827332372148, guid: cb58b6ea58e20384e94b1dc8373fbeff, type: 3}
       propertyPath: m_VersionIndex
-      value: 1227
+      value: 1236
       objectReference: {fileID: 0}
     - target: {fileID: 8017191813201948337, guid: cb58b6ea58e20384e94b1dc8373fbeff, type: 3}
       propertyPath: m_Name
@@ -7487,6 +7498,7 @@ MonoBehaviour:
   outlineMode: 0
   outlineColor: {r: 0.6415094, g: 0, b: 0.48817316, a: 1}
   outlineWidth: 20
+  getChilds: 1
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -7704,7 +7716,7 @@ PrefabInstance:
       objectReference: {fileID: 2011700524}
     - target: {fileID: 5449230827332372148, guid: cb58b6ea58e20384e94b1dc8373fbeff, type: 3}
       propertyPath: m_VersionIndex
-      value: 1227
+      value: 1236
       objectReference: {fileID: 0}
     - target: {fileID: 8017191813201948337, guid: cb58b6ea58e20384e94b1dc8373fbeff, type: 3}
       propertyPath: m_Name

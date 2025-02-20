@@ -62,7 +62,9 @@ public class MeshOutline : MonoBehaviour {
   [SerializeField, Range(0f, 50f)]
   private float outlineWidth = 2f;
 
-  [Header("Optional")]
+    [Header("Optional")]
+
+    public bool getChilds = true;
 
   [SerializeField, Tooltip("Precompute enabled: Per-vertex calculations are performed in the editor and serialized with the object. "
   + "Precompute disabled: Per-vertex calculations are performed at runtime in Awake(). This may cause a pause for large meshes.")]
@@ -82,8 +84,15 @@ public class MeshOutline : MonoBehaviour {
 
   void Awake() {
 
-    // Cache renderers
-    renderers = GetComponentsInChildren<Renderer>();
+        // Cache renderers
+        
+    if(getChilds) { 
+        renderers = GetComponentsInChildren<Renderer>();     
+    } else
+        {
+            renderers = new Renderer[1];
+            renderers[0] = gameObject.GetComponent<Renderer>();
+        }
 
     // Instantiate outline materials
     outlineMaskMaterial = Instantiate(Resources.Load<Material>(@"Materials/OutlineMask"));
@@ -100,7 +109,8 @@ public class MeshOutline : MonoBehaviour {
   }
 
   void OnEnable() {
-    foreach (var renderer in renderers) {
+        print("Starts " + gameObject.name);
+        foreach (var renderer in renderers) {
 
       // Append outline shaders
       var materials = renderer.sharedMaterials.ToList();
@@ -114,6 +124,7 @@ public class MeshOutline : MonoBehaviour {
 
   void OnValidate() {
 
+    print("gameobjectupdated " + gameObject.name);
     // Update material properties
     needsUpdate = true;
 
@@ -130,8 +141,8 @@ public class MeshOutline : MonoBehaviour {
   }
 
   void Update() {
-    if (needsUpdate) {
-      needsUpdate = false;
+        needsUpdate = true;
+        if (needsUpdate) {
 
       UpdateMaterialProperties();
     }
@@ -270,9 +281,9 @@ public class MeshOutline : MonoBehaviour {
   }
 
   void UpdateMaterialProperties() {
-
-    // Apply properties according to mode
-    outlineFillMaterial.SetColor("_OutlineColor", outlineColor);
+        print("gameobjectupdated " + gameObject.name);
+        // Apply properties according to mode
+        outlineFillMaterial.SetColor("_OutlineColor", outlineColor);
 
     switch (outlineMode) {
       case Mode.OutlineAll:

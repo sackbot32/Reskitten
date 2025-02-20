@@ -1,4 +1,5 @@
 using DG.Tweening;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class OutLineGrowth : MonoBehaviour
@@ -12,6 +13,7 @@ public class OutLineGrowth : MonoBehaviour
     void Start()
     {
         outline = GetComponent<MeshOutline>();
+        outline.enabled = false;
         outline.OutlineWidth = startValue;
         DOTween.To(() => outline.OutlineWidth, x=> outline.OutlineWidth = x, finishValue,duration).SetLoops(-1,LoopType.Yoyo);
         

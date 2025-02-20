@@ -122,6 +122,7 @@ public class GlowStickTool : MonoBehaviour, ITool
                 {
                     if (currentOutlined != null && currentOutlined != hit.collider.gameObject)
                     {
+                        print("set false before going away");
                         currentOutlined.GetComponent<MeshOutline>().enabled = false;
                         currentOutlined = hit.collider.gameObject;
                         currentOutlined.GetComponent<MeshOutline>().enabled = true;
