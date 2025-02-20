@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootPoint: {fileID: 5521440693905619780}
-  toolSprite: {fileID: 21300000, guid: 932570f2547d20448a106016067cb99a, type: 3}
+  toolSprite: {fileID: 21300000, guid: b187fdc3e82431f449ebce81bca198e7, type: 3}
   stickMesh: {fileID: 8985685021793010946}
   intensity: 45
   colorModes:
