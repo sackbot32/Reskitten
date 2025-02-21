@@ -1066,6 +1066,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2342539220252528969, guid: 3d4074938a92c9746a4083bb0d17ff5d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 9.945158
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342539220252528969, guid: 3d4074938a92c9746a4083bb0d17ff5d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 9.945158
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342539220252528969, guid: 3d4074938a92c9746a4083bb0d17ff5d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.1635203
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342539220252528969, guid: 3d4074938a92c9746a4083bb0d17ff5d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.018
+      objectReference: {fileID: 0}
+    - target: {fileID: 2342539220252528969, guid: 3d4074938a92c9746a4083bb0d17ff5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.048
+      objectReference: {fileID: 0}
     - target: {fileID: 8479661395657133548, guid: 3d4074938a92c9746a4083bb0d17ff5d, type: 3}
       propertyPath: m_Name
       value: MintThrowerTool
