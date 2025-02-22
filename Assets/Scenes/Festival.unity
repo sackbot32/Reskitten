@@ -728,7 +728,7 @@ PrefabInstance:
       objectReference: {fileID: 682598608}
     - target: {fileID: 4253881876218907393, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_VersionIndex
-      value: 1936
+      value: 1948
       objectReference: {fileID: 0}
     - target: {fileID: 4371848532560389151, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2685,7 +2685,7 @@ PrefabInstance:
       objectReference: {fileID: 1030866794}
     - target: {fileID: 4253881876218907393, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_VersionIndex
-      value: 1936
+      value: 1948
       objectReference: {fileID: 0}
     - target: {fileID: 4253881876218907393, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_SelectedEdges.Array.size
@@ -5889,7 +5889,7 @@ PrefabInstance:
       objectReference: {fileID: 2097464084}
     - target: {fileID: 4253881876218907393, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_VersionIndex
-      value: 1936
+      value: 1948
       objectReference: {fileID: 0}
     - target: {fileID: 4371848532560389151, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10981,7 +10981,7 @@ PrefabInstance:
       objectReference: {fileID: 574864874}
     - target: {fileID: 4253881876218907393, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_VersionIndex
-      value: 1936
+      value: 1948
       objectReference: {fileID: 0}
     - target: {fileID: 4371848532560389151, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15732,7 +15732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 108a08035d2ab404db08047911807673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactImage: {fileID: 1444032818, guid: 2c6790cd1a35d274886684cd22c05dac, type: 3}
+  interactImage: {fileID: 21300000, guid: 7a0d1dcea0823f640b4c34f261cd4b51, type: 3}
   interactEvent:
     m_PersistentCalls:
       m_Calls:
@@ -18647,7 +18647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 108a08035d2ab404db08047911807673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactImage: {fileID: 1444032818, guid: 2c6790cd1a35d274886684cd22c05dac, type: 3}
+  interactImage: {fileID: 21300000, guid: 7a0d1dcea0823f640b4c34f261cd4b51, type: 3}
   interactEvent:
     m_PersistentCalls:
       m_Calls:
@@ -19940,7 +19940,7 @@ PrefabInstance:
       objectReference: {fileID: 999418820}
     - target: {fileID: 4253881876218907393, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_VersionIndex
-      value: 1936
+      value: 1948
       objectReference: {fileID: 0}
     - target: {fileID: 4371848532560389151, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22116,7 +22116,7 @@ PrefabInstance:
       objectReference: {fileID: 1625630125}
     - target: {fileID: 4253881876218907393, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_VersionIndex
-      value: 1936
+      value: 1948
       objectReference: {fileID: 0}
     - target: {fileID: 4371848532560389151, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22193,6 +22193,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1729649051}
     m_Modifications:
+    - target: {fileID: 1814596024313507497, guid: 157708fb6536da14aadaf9ad15b96044, type: 3}
+      propertyPath: interactImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 0f9534fc4252349409bdc0e5d7eadc8d, type: 3}
     - target: {fileID: 2655723067000888377, guid: 157708fb6536da14aadaf9ad15b96044, type: 3}
       propertyPath: m_Name
       value: GrabPlugTestInter
@@ -23130,7 +23134,7 @@ PrefabInstance:
       objectReference: {fileID: 440265843}
     - target: {fileID: 4253881876218907393, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_VersionIndex
-      value: 1933
+      value: 1945
       objectReference: {fileID: 0}
     - target: {fileID: 4371848532560389151, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25555,7 +25559,7 @@ PrefabInstance:
       objectReference: {fileID: 151704132}
     - target: {fileID: 4253881876218907393, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_VersionIndex
-      value: 1936
+      value: 1948
       objectReference: {fileID: 0}
     - target: {fileID: 4371848532560389151, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25994,7 +25998,7 @@ PrefabInstance:
       objectReference: {fileID: 548828002}
     - target: {fileID: 4253881876218907393, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_VersionIndex
-      value: 1936
+      value: 1948
       objectReference: {fileID: 0}
     - target: {fileID: 4371848532560389151, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26645,7 +26649,7 @@ PrefabInstance:
       objectReference: {fileID: 1559642154}
     - target: {fileID: 4253881876218907393, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_VersionIndex
-      value: 1936
+      value: 1948
       objectReference: {fileID: 0}
     - target: {fileID: 4371848532560389151, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27305,6 +27309,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PermanentManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1290660043158391447, guid: ecda5e7e7aa9e7746be1df01f94b9b7b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2557744933177994031, guid: ecda5e7e7aa9e7746be1df01f94b9b7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.932095
@@ -27344,6 +27352,10 @@ PrefabInstance:
     - target: {fileID: 2557744933177994031, guid: ecda5e7e7aa9e7746be1df01f94b9b7b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433300292014773195, guid: ecda5e7e7aa9e7746be1df01f94b9b7b, type: 3}
+      propertyPath: currentSong
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28913,7 +28925,7 @@ PrefabInstance:
       objectReference: {fileID: 963831633}
     - target: {fileID: 4253881876218907393, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_VersionIndex
-      value: 1936
+      value: 1948
       objectReference: {fileID: 0}
     - target: {fileID: 4371848532560389151, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_LocalPosition.x
@@ -41066,7 +41078,7 @@ PrefabInstance:
       objectReference: {fileID: 1913678166}
     - target: {fileID: 4253881876218907393, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_VersionIndex
-      value: 1936
+      value: 1948
       objectReference: {fileID: 0}
     - target: {fileID: 4371848532560389151, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_LocalPosition.x
@@ -42456,7 +42468,7 @@ PrefabInstance:
       objectReference: {fileID: 1289372491}
     - target: {fileID: 4253881876218907393, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_VersionIndex
-      value: 1936
+      value: 1948
       objectReference: {fileID: 0}
     - target: {fileID: 4371848532560389151, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_LocalPosition.x
@@ -48374,7 +48386,7 @@ PrefabInstance:
       objectReference: {fileID: 1325207881}
     - target: {fileID: 4253881876218907393, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_VersionIndex
-      value: 1936
+      value: 1948
       objectReference: {fileID: 0}
     - target: {fileID: 4371848532560389151, guid: 9b9d48704d8262e419f92092e3a3e276, type: 3}
       propertyPath: m_LocalPosition.x
@@ -49279,7 +49291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 108a08035d2ab404db08047911807673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactImage: {fileID: 1444032818, guid: 2c6790cd1a35d274886684cd22c05dac, type: 3}
+  interactImage: {fileID: 21300000, guid: 7a0d1dcea0823f640b4c34f261cd4b51, type: 3}
   interactEvent:
     m_PersistentCalls:
       m_Calls:

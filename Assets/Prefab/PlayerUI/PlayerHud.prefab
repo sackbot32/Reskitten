@@ -753,8 +753,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.49250004, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 3, y: -125}
-  m_SizeDelta: {x: 175.9831, y: 49.049316}
+  m_AnchoredPosition: {x: 15, y: -145}
+  m_SizeDelta: {x: 234.2787, y: 43.5302}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &2434986757200129053
 CanvasRenderer:
@@ -786,8 +786,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Gato rescatado
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0251954705a6109409fcb9034403a5a7, type: 2}
-  m_sharedMaterial: {fileID: -2300720661290959786, guid: 0251954705a6109409fcb9034403a5a7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b41be1bd4da912543b795cbd85ba4680, type: 2}
+  m_sharedMaterial: {fileID: -2300720661290959786, guid: b41be1bd4da912543b795cbd85ba4680, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -849,7 +849,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -21.703308, y: 0, z: -27.129211, w: 0}
+  m_margin: {x: -0.31674957, y: 0, z: 0.4663238, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1706,7 +1706,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &667194062212432286
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2122,8 +2122,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -187.3, y: -3.5}
-  m_SizeDelta: {x: 125.6643, y: 39.6756}
+  m_AnchoredPosition: {x: -207.5476, y: -0.33109}
+  m_SizeDelta: {x: 166.1595, y: 33.338}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4962520457518753206
 CanvasRenderer:
@@ -3279,7 +3279,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: VFX
+  m_text: SFX
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0251954705a6109409fcb9034403a5a7, type: 2}
   m_sharedMaterial: {fileID: -2300720661290959786, guid: 0251954705a6109409fcb9034403a5a7, type: 2}
