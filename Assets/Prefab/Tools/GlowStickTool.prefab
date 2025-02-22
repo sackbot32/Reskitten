@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5521440693905619780}
   - component: {fileID: 2673801613074822338}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 3999008318496993952}
   - component: {fileID: 5672264934147859604}
   - component: {fileID: 6547172663525576272}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: GlowStickTool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,7 +410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d11cad1cbb3698c41943ca67f3b87ae4, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -12400,7 +12400,7 @@ GameObject:
   - component: {fileID: 522402428}
   - component: {fileID: 522402430}
   - component: {fileID: 522402429}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Receptor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22102,19 +22102,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7949112231795728652, guid: 157708fb6536da14aadaf9ad15b96044, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7949112231795728652, guid: 157708fb6536da14aadaf9ad15b96044, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7949112231795728652, guid: 157708fb6536da14aadaf9ad15b96044, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7949112231795728652, guid: 157708fb6536da14aadaf9ad15b96044, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -1.6835824e-37
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7949112231795728652, guid: 157708fb6536da14aadaf9ad15b96044, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -22122,7 +22122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7949112231795728652, guid: 157708fb6536da14aadaf9ad15b96044, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 7949112231795728652, guid: 157708fb6536da14aadaf9ad15b96044, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -39408,6 +39408,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6852701992577590454, guid: 55b488b1d3b829842b7ceb17b9582e3f, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7809568729296754350, guid: 55b488b1d3b829842b7ceb17b9582e3f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.647121
@@ -39699,6 +39703,10 @@ PrefabInstance:
     - target: {fileID: 9163277148525582062, guid: 55b488b1d3b829842b7ceb17b9582e3f, type: 3}
       propertyPath: m_Name
       value: PlugHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 9163277148525582062, guid: 55b488b1d3b829842b7ceb17b9582e3f, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

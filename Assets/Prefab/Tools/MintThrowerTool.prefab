@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6231130358847208111}
   - component: {fileID: 1312337424033533533}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ThrowPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 8569395807399054715}
   - component: {fileID: 1926981658534638763}
   - component: {fileID: 1898627902985322726}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MintThrowerTool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bc7e64b37065f914f8d62175d0336bae, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

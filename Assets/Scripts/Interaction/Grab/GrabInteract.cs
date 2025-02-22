@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -12,6 +13,7 @@ public class GrabInteract : MonoBehaviour,IInteract
     public bool isPlug;
     public bool plugged;
     public PlugTrigger plugIn;
+    public bool allowToGrab = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,7 +22,7 @@ public class GrabInteract : MonoBehaviour,IInteract
 
     private void FixedUpdate()
     {
-        if (isInteracting)
+        if (isInteracting && allowToGrab && !plugged)
         {
             targetPoint = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)).GetPoint(3);
             dir = (targetPoint - transform.position).normalized;
@@ -39,11 +41,14 @@ public class GrabInteract : MonoBehaviour,IInteract
     }
     public void EndInteraction(bool mode = false)
     {
-        print("ending");
-        rb.useGravity = true;
-        rb.linearDamping = 0;
-        rb.constraints = RigidbodyConstraints.None;
-        isInteracting = false;
+        if (!plugged)
+        {
+            print("ending");
+            rb.useGravity = true;
+            rb.linearDamping = 0;
+            rb.constraints = RigidbodyConstraints.None;
+            isInteracting = false;
+        }
     }
 
     public bool IsInteracting()
@@ -59,8 +64,10 @@ public class GrabInteract : MonoBehaviour,IInteract
 
     public bool RecieveInteraction()
     {
+        print("Before if");
         if (plugged)
         {
+            print("After if");
             PlugOff();
         }
         rb.useGravity = false;
@@ -84,12 +91,26 @@ public class GrabInteract : MonoBehaviour,IInteract
 
     public void PlugOff()
     {
-        plugIn.doOnce = false;
-        rb.isKinematic = false;
-        transform.position = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)).GetPoint(3);
-        plugged = false;
-        plugIn.interactPlugOffEvent.Invoke();
-        plugIn = null;
+        
+        if (plugIn != null)
+        {
+            
+            plugged = false;
+            plugIn.plugCollider.enabled = false;
+            rb.isKinematic = false;
+            transform.position = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)).GetPoint(3);
+            plugIn.interactPlugOffEvent.Invoke();
+            StartCoroutine(DisablePluggingForTime(1f,plugIn));
+            plugIn = null;
+        }
+    }
+
+    IEnumerator DisablePluggingForTime(float time,PlugTrigger plug)
+    {
+        yield return new WaitForSeconds(time);
+        plug.plugCollider.enabled = true;
+        plug.doOnce = false;
+
     }
 
 }
