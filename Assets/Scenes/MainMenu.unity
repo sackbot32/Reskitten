@@ -420,10 +420,10 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 220617800}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
+      - m_Target: {fileID: 1369705544}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ChangeMusicVol
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -710,11 +710,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217569660}
   m_CullTransparentMesh: 1
---- !u!82 &220617800 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 7662478004370197980, guid: 194471e5467c0404aa505c15647fe87d, type: 3}
-  m_PrefabInstance: {fileID: 7507277814864128142}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &220617802 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6281969531866215689, guid: 194471e5467c0404aa505c15647fe87d, type: 3}
@@ -3788,6 +3783,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8433300292014773195, guid: ecda5e7e7aa9e7746be1df01f94b9b7b, type: 3}
+      propertyPath: currentSong
+      value: 
+      objectReference: {fileID: 8300000, guid: 44708b0d4bfdbcf4b8f0eab1889e1541, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3844,6 +3843,14 @@ PrefabInstance:
     - target: {fileID: 6851498684079244367, guid: 194471e5467c0404aa505c15647fe87d, type: 3}
       propertyPath: m_Name
       value: UISfxSource
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662478004370197980, guid: 194471e5467c0404aa505c15647fe87d, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662478004370197980, guid: 194471e5467c0404aa505c15647fe87d, type: 3}
+      propertyPath: m_audioClip
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

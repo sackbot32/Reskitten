@@ -84,6 +84,7 @@ public class GrabInteract : MonoBehaviour,IInteract
 
     public void PlugOff()
     {
+        plugIn.doOnce = false;
         rb.isKinematic = false;
         transform.position = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)).GetPoint(3);
         plugged = false;

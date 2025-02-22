@@ -33,7 +33,10 @@ public class CatMint : MonoBehaviour
         Debug.DrawRay(feet.position, -transform.up * floorDetect, Color.red);
         if (Physics.Raycast(feet.position,-Vector3.up,out RaycastHit hit,floorDetect) && !hasHitGround)
         {
-            SFXPlayer.StaticPlaySound(touchSource, touchSource.clip, true);
+            if(touchSource != null)
+            {
+                SFXPlayer.StaticPlaySound(touchSource, touchSource.clip, true);
+            }
             hasHitGround = true;
             rb.isKinematic = true;
             transform.position = hit.point - feet.localPosition;

@@ -215,8 +215,8 @@ MonoBehaviour:
   turnSource: {fileID: 6700844414251831522}
   equipSource: {fileID: 0}
   soundList:
-  - {fileID: 8300000, guid: d6bd28f46d20dcb46ad1fc2d1a2e2f86, type: 3}
-  - {fileID: 8300000, guid: d6bd28f46d20dcb46ad1fc2d1a2e2f86, type: 3}
+  - {fileID: 8300000, guid: 586ae173d2fb962499bebb1a64e5385d, type: 3}
+  - {fileID: 8300000, guid: 494b8991abeb5e240b942e2dd850d437, type: 3}
   - {fileID: 8300000, guid: d6bd28f46d20dcb46ad1fc2d1a2e2f86, type: 3}
 --- !u!1 &6081640743628692020
 GameObject:

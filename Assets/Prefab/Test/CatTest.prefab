@@ -101,10 +101,10 @@ MonoBehaviour:
   anim: {fileID: 0}
   source: {fileID: 7363003107082370174}
   idleMeows:
-  - clip: {fileID: 8300000, guid: d6bd28f46d20dcb46ad1fc2d1a2e2f86, type: 3}
+  - clip: {fileID: 8300000, guid: 43453c4a29e10ef4eba78c87a092d2c1, type: 3}
     weight: 100
   goingMeows:
-  - {fileID: 8300000, guid: d6bd28f46d20dcb46ad1fc2d1a2e2f86, type: 3}
+  - {fileID: 8300000, guid: c39198d1c32bca4498abb3d81e4551a8, type: 3}
   minTimeTillMeow: 1
   maxTimeTillMeow: 5
 --- !u!54 &1286542682042122156

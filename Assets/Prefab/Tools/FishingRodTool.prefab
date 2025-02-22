@@ -112,8 +112,8 @@ MonoBehaviour:
   fishingRodSource: {fileID: 1831336480018024088}
   equipSource: {fileID: 0}
   soundList:
-  - {fileID: 8300000, guid: d6bd28f46d20dcb46ad1fc2d1a2e2f86, type: 3}
-  - {fileID: 8300000, guid: d6bd28f46d20dcb46ad1fc2d1a2e2f86, type: 3}
+  - {fileID: 8300000, guid: 24f854c9ecf7c6b4a84f3ff8ebf33e1e, type: 3}
+  - {fileID: 8300000, guid: 3b4658b49e0b67b448a6b7dd44a37d5c, type: 3}
   - {fileID: 8300000, guid: d6bd28f46d20dcb46ad1fc2d1a2e2f86, type: 3}
 --- !u!120 &8171570634422234062
 LineRenderer:

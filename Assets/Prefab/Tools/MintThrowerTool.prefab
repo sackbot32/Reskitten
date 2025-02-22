@@ -241,7 +241,7 @@ MonoBehaviour:
   throwSource: {fileID: 1312337424033533533}
   equipSource: {fileID: 0}
   soundList:
-  - {fileID: 8300000, guid: d6bd28f46d20dcb46ad1fc2d1a2e2f86, type: 3}
+  - {fileID: 8300000, guid: 24f854c9ecf7c6b4a84f3ff8ebf33e1e, type: 3}
   - {fileID: 8300000, guid: d6bd28f46d20dcb46ad1fc2d1a2e2f86, type: 3}
 --- !u!120 &1898627902985322726
 LineRenderer:

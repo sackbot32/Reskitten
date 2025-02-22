@@ -155,7 +155,7 @@ MonoBehaviour:
   floorDetect: 0.25
   feet: {fileID: 9192890540820877274}
   destructionTime: 15
-  touchSource: {fileID: 3167051035602619061}
+  touchSource: {fileID: 0}
 --- !u!82 &3167051035602619061
 AudioSource:
   m_ObjectHideFlags: 0

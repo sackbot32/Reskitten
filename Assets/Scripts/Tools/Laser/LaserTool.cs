@@ -33,7 +33,7 @@ public class LaserTool : MonoBehaviour, ITool
     }
     public void Main()
     {
-        if (turnSource != null)
+        if (turnSource != null && lineRenderer.enabled == false)
         {
             SFXPlayer.StaticPlaySound(turnSource, soundList[0],true);
         }
@@ -42,8 +42,9 @@ public class LaserTool : MonoBehaviour, ITool
 
     public void UpMain()
     {
-        if (turnSource != null)
+        if (turnSource != null && lineRenderer.enabled == true)
         {
+            turnSource.Stop();
             SFXPlayer.StaticPlaySound(turnSource, soundList[1], true);
         }
         lineRenderer.enabled = false;

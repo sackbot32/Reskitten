@@ -425,8 +425,8 @@ MonoBehaviour:
   sprintInput: {fileID: -7471211009204490832, guid: e919c736128f9f5419453abc3a6d926e, type: 3}
   sprintBar: {fileID: 0}
   audioSource: {fileID: 148691275257949736}
-  walk: {fileID: 8300000, guid: d6bd28f46d20dcb46ad1fc2d1a2e2f86, type: 3}
-  jump: {fileID: 8300000, guid: d6bd28f46d20dcb46ad1fc2d1a2e2f86, type: 3}
+  walk: {fileID: 8300000, guid: dfd409321ad704b43b70e591583e6bcf, type: 3}
+  jump: {fileID: 8300000, guid: c00d1f2e78741354088d4cd19ea43349, type: 3}
   addedSpeed: 90
   maxSpeed: 5
   runMultiplier: 1

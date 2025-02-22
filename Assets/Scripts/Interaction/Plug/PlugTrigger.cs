@@ -6,6 +6,7 @@ public class PlugTrigger : MonoBehaviour
     public Transform plugPosition;
     public UnityEvent interactPlugInEvent;
     public UnityEvent interactPlugOffEvent;
+    public bool doOnce;
     private void OnTriggerEnter(Collider other)
     {
         
@@ -16,8 +17,9 @@ public class PlugTrigger : MonoBehaviour
         GrabInteract grab = other.gameObject.GetComponent<GrabInteract>();
         if (grab != null)
         {
-            if (grab.isPlug && !grab.IsInteracting())
+            if (grab.isPlug && !grab.IsInteracting() && !doOnce)
             {
+                doOnce = true;
                 grab.plugged = true;
                 grab.EndInteraction();
                 grab.PlugIn(plugPosition);
