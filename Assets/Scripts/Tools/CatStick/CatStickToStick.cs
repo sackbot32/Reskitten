@@ -10,7 +10,7 @@ public class CatStickToStick : MonoBehaviour
         CatController controller = other.gameObject.GetComponent<CatController>();
         if (controller != null)
         {
-            if (controller.enabled)
+            if (controller.enabled == true && controller.agent.enabled)
             {
                 SFXPlayer.StaticPlaySound(catchSource, catchSource.clip, true);
                 tool.StickCatToTool(controller, transform);
