@@ -95,7 +95,7 @@ public class CatStickTool : MonoBehaviour, ITool
         catController.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
         foreach (Transform item in catController.transform)
         {
-            item.gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+            item.gameObject.layer = LayerMask.NameToLayer("Hand");
             if(item.childCount > 0)
             {
                 foreach (Transform itemChild in item)
