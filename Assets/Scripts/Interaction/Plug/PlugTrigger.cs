@@ -44,6 +44,7 @@ public class PlugTrigger : MonoBehaviour
         yield return new WaitForSeconds(time);
         plug.allowToGrab = true;
         plugCollider.enabled = false;
+        plug.isInteracting = false;
 
     }
 

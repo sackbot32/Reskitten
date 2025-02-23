@@ -5,7 +5,7 @@ using UnityEngine;
 public class GrabInteract : MonoBehaviour,IInteract
 {
     public Sprite interactImage;
-    private bool isInteracting;
+    public bool isInteracting;
     private Rigidbody rb;
     Vector3 dir;
     private Vector3 targetPoint;
@@ -22,7 +22,7 @@ public class GrabInteract : MonoBehaviour,IInteract
 
     private void FixedUpdate()
     {
-        if (isInteracting && allowToGrab && !plugged)
+        if (isInteracting && allowToGrab)
         {
             targetPoint = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)).GetPoint(3);
             dir = (targetPoint - transform.position).normalized;

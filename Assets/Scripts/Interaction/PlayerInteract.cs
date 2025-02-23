@@ -61,6 +61,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 if (!currentInteract.IsInteracting())
                 {
+                    print("is Interacting exists");
                     mantainInteraction = currentInteract.RecieveInteraction();
                 }
             }

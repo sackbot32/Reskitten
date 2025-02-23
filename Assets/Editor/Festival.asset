@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: Festival
   m_EditorClassIdentifier: 
   sceneID: 
-  positions: []
+  positions:
+  - posName: Start
+    pos: {x: 0, y: 0, z: 1.35}
+  - posName: Enchufe
+    pos: {x: 23.30066, y: 0.055761825, z: 17.494757}
