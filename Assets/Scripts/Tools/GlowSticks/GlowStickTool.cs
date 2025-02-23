@@ -52,31 +52,46 @@ public class GlowStickTool : MonoBehaviour, ITool
                     if (hit.collider.gameObject.GetComponent<CrowdInstance>() != null) 
                     {
                         used = true;
-                        SFXPlayer.StaticPlaySound(userSource, soundList[1], true);
+                        if(userSource != null)
+                        {
+                            SFXPlayer.StaticPlaySound(userSource, soundList[1], true);
+                        }
                         selectedInstance = hit.collider.gameObject.GetComponent<CrowdInstance>();
                         stickMesh.materials[2].SetColor("_EmissionColor", colorModes[1] * intensity);
                     } else
                     {
-                        SFXPlayer.StaticPlaySound(userSource, soundList[0], true);
+                        if (userSource != null)
+                        { 
+                            SFXPlayer.StaticPlaySound(userSource, soundList[0], true);
+                        }
                     }
                 } else
                 {
                     if (hit.collider.gameObject.GetComponent<CrowdPosition>() != null)
                     {
                         used = true;
-                        SFXPlayer.StaticPlaySound(userSource, soundList[2], true);
+                        if (userSource != null)
+                        { 
+                            SFXPlayer.StaticPlaySound(userSource, soundList[2], true);
+                        }
                         selectedInstance.GetComponent<MeshOutline>().enabled = false;
                         hit.collider.gameObject.GetComponent<CrowdPosition>().SetCrowd(selectedInstance.gameObject);
                         stickMesh.materials[2].SetColor("_EmissionColor", colorModes[0] * intensity);
                         selectedInstance = null;
                     } else
                     {
-                        SFXPlayer.StaticPlaySound(userSource, soundList[0], true);
+                        if (userSource != null)
+                        { 
+                            SFXPlayer.StaticPlaySound(userSource, soundList[0], true);
+                        }
                     }
                 }
             } else
             {
-                SFXPlayer.StaticPlaySound(userSource, soundList[0], true);
+                if (userSource != null)
+                { 
+                    SFXPlayer.StaticPlaySound(userSource, soundList[0], true);
+                }
             }
         }
         
