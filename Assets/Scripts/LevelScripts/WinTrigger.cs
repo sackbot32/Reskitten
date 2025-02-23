@@ -4,6 +4,7 @@ public class WinTrigger : MonoBehaviour
 {
     private bool hasWon;
     public int levelIndex;
+    public GameObject lightOnWin;
     private void OnTriggerStay(Collider other)
     {
         if(other.tag == "Player")

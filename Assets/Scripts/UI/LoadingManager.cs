@@ -8,8 +8,11 @@ public class LoadingManager : MonoBehaviour
 {
     public static LoadingManager instance;
     public List<Image> loadingScreenImages = new List<Image>();
+    public Transform loadingRotation;
+
     public float transitionDuration;
 
+    private Coroutine spinCoroutine;
     private void Awake()
     {
         if(LoadingManager.instance == null)
@@ -30,7 +33,10 @@ public class LoadingManager : MonoBehaviour
             foreach (Image image in loadingScreenImages)
             {
                 Color current = image.color;
-                image.DOColor(new Color(current.r,current.g,current.b,1f), transitionDurationCalled);
+                image.DOColor(new Color(current.r,current.g,current.b,1f), transitionDurationCalled).OnComplete(() =>
+                {
+                    spinCoroutine = StartCoroutine(SpinLogo());
+                });
             }
         }
         else
@@ -39,6 +45,11 @@ public class LoadingManager : MonoBehaviour
             {
                 Color current = image.color;
                 image.DOColor(new Color(current.r, current.g, current.b, 0f), transitionDurationCalled);
+                if(spinCoroutine != null)
+                {
+                    StopCoroutine(spinCoroutine);
+                    spinCoroutine = null;
+                }
             }
         }
     }
@@ -71,5 +82,14 @@ public class LoadingManager : MonoBehaviour
         ShowLoadScreen(false, transitionDuration);
 
         sceneLoad.allowSceneActivation = true;
+    }
+
+    IEnumerator SpinLogo()
+    {
+        while (true)
+        {
+            loadingRotation.transform.rotation = Quaternion.Euler(0, loadingRotation.transform.rotation.eulerAngles.y - 2f, 0);
+            yield return null;
+        }
     }
 }

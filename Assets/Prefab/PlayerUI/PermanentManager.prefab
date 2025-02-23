@@ -51,6 +51,7 @@ MonoBehaviour:
   - {fileID: 3573703283520655878}
   - {fileID: 4005743284956717311}
   - {fileID: 6885303790162272056}
+  loadingRotation: {fileID: 7330140050717384703}
   transitionDuration: 0.2
 --- !u!114 &8433300292014773195
 MonoBehaviour:

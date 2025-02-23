@@ -154,8 +154,8 @@ MonoBehaviour:
   rodTool: {fileID: 0}
   touchSource: {fileID: 8528254790006757701}
   soundList:
-  - {fileID: 8300000, guid: d6bd28f46d20dcb46ad1fc2d1a2e2f86, type: 3}
-  - {fileID: 8300000, guid: d6bd28f46d20dcb46ad1fc2d1a2e2f86, type: 3}
+  - {fileID: 8300000, guid: 3a7716c3fb3a46a41ae265acc03ca39f, type: 3}
+  - {fileID: 8300000, guid: e2c0d6b5ea6318a489c3b687c901eb2a, type: 3}
 --- !u!82 &8528254790006757701
 AudioSource:
   m_ObjectHideFlags: 0

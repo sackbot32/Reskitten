@@ -125,6 +125,10 @@ public class CatController : MonoBehaviour
             }
             random -= forSelection.weight;
         }
+        while (source.isPlaying)
+        {
+            yield return null;
+        }
         SFXPlayer.StaticPlaySound(source, clipToPlay, true);
         StartCoroutine(CatRandomMeow(UnityEngine.Random.Range(minTimeTillMeow, maxTimeTillMeow)));
     }
