@@ -105,8 +105,8 @@ MonoBehaviour:
     weight: 100
   goingMeows:
   - {fileID: 8300000, guid: c39198d1c32bca4498abb3d81e4551a8, type: 3}
-  minTimeTillMeow: 1
-  maxTimeTillMeow: 5
+  minTimeTillMeow: 10
+  maxTimeTillMeow: 20
 --- !u!54 &1286542682042122156
 Rigidbody:
   m_ObjectHideFlags: 0
