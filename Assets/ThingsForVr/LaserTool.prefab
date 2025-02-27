@@ -211,7 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 3523879720184197240}
   shootPoint: {fileID: 658006765809388060}
-  toolSprite: {fileID: 21300000, guid: 932570f2547d20448a106016067cb99a, type: 3}
+  toolSprite: {fileID: 21300000, guid: ce658386a4d33a345bd16ec0cf77462f, type: 3}
   turnSource: {fileID: 6700844414251831522}
   equipSource: {fileID: 0}
   soundList:
