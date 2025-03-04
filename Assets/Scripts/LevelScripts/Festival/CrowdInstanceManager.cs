@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using static UnityEditor.PlayerSettings;
 using Unity.AI.Navigation;
 
 public class CrowdInstanceManager : MonoBehaviour
