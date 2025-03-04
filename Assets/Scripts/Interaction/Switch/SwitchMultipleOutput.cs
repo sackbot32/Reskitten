@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class SwitchMultipleOutput : MonoBehaviour
 {
@@ -17,12 +18,18 @@ public class SwitchMultipleOutput : MonoBehaviour
             
         }
 
+
+        StartCoroutine(InitialSwitch());
+        
+    }
+
+    IEnumerator InitialSwitch()
+    {
+        yield return new WaitForSeconds(0.2f);
         foreach (ISwitchInput input in inputList)
         {
             input.SwitchInput(0);
         }
-        
-        
     }
 
 
